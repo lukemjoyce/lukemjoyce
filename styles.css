@@ -138,6 +138,7 @@ body {
 
 /* ── Hero ───────────────────────────────────────── */
 .hero {
+  position: relative;
   height: 100%;
   display: flex;
   align-items: center;
@@ -145,7 +146,20 @@ body {
   padding: 24px;
 }
 
+.blob {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 78vmin;
+  height: 78vmin;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 0;
+}
+
 .hero-title {
+  position: relative;
+  z-index: 1;
   font-size: clamp(1.8rem, 6vw, 3.4rem);
   font-weight: 300;
   letter-spacing: -0.02em;
