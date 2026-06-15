@@ -63,7 +63,7 @@
 
     const cx = W / 2;
     const cy = H / 2;
-    const R = Math.min(W, H) * 0.42; // world radius in px
+    const R = Math.min(W, H) * 0.34; // world radius in px
     const camDist = R * 3.2;
     const focal = R * 3.2;
 

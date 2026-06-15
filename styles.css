@@ -150,8 +150,8 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 80vmin;
-  height: 80vmin;
+  width: 100vmin;
+  height: 100vmin;
   transform: translate(-50%, -50%);
   pointer-events: none;
 }
