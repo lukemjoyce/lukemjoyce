@@ -2,9 +2,11 @@
    Depth is conveyed purely by line opacity, so it reads as 3D while
    staying the same color as the page type. */
 (() => {
-  const canvas = document.getElementById("blob");
-  if (!canvas) return;
-  const ctx = canvas.getContext("2d");
+  const backCanvas = document.getElementById("blob-back");
+  const frontCanvas = document.getElementById("blob-front");
+  if (!backCanvas || !frontCanvas) return;
+  const backCtx = backCanvas.getContext("2d");
+  const frontCtx = frontCanvas.getContext("2d");
 
   const STONE = [68, 64, 60]; // var(--stone) #44403c
   const RINGS = 26; // latitude divisions
@@ -40,12 +42,14 @@
   let W = 0, H = 0, dpr = 1;
   function resize() {
     dpr = Math.min(window.devicePixelRatio || 1, 2);
-    const r = canvas.getBoundingClientRect();
+    const r = backCanvas.getBoundingClientRect();
     W = r.width;
     H = r.height;
-    canvas.width = Math.round(W * dpr);
-    canvas.height = Math.round(H * dpr);
-    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    for (const c of [backCanvas, frontCanvas]) {
+      c.width = Math.round(W * dpr);
+      c.height = Math.round(H * dpr);
+      c.getContext("2d").setTransform(dpr, 0, 0, dpr, 0, 0);
+    }
   }
   resize();
   window.addEventListener("resize", resize);
@@ -54,7 +58,8 @@
 
   function frame(now) {
     const t = now * 0.0009;
-    ctx.clearRect(0, 0, W, H);
+    backCtx.clearRect(0, 0, W, H);
+    frontCtx.clearRect(0, 0, W, H);
 
     const cx = W / 2;
     const cy = H / 2;
@@ -90,17 +95,21 @@
     }
 
     // Far depth fades toward 0 opacity, near toward full — the 3D cue.
+    // Near-side lines (depth < 0) draw on the front canvas, over the title,
+    // so the name appears to sit inside the blob.
     function stroke(ax, ay, az, bx, by, bz) {
       const depth = (az + bz) * 0.5;
       const a = 0.07 + 0.33 * (1 - (depth + R) / (2 * R));
-      ctx.strokeStyle = `rgba(${STONE[0]},${STONE[1]},${STONE[2]},${a.toFixed(3)})`;
-      ctx.beginPath();
-      ctx.moveTo(ax, ay);
-      ctx.lineTo(bx, by);
-      ctx.stroke();
+      const c = depth < 0 ? frontCtx : backCtx;
+      c.strokeStyle = `rgba(${STONE[0]},${STONE[1]},${STONE[2]},${a.toFixed(3)})`;
+      c.beginPath();
+      c.moveTo(ax, ay);
+      c.lineTo(bx, by);
+      c.stroke();
     }
 
-    ctx.lineWidth = 1;
+    backCtx.lineWidth = 1;
+    frontCtx.lineWidth = 1;
     for (let i = 0; i <= RINGS; i++) {
       for (let j = 0; j <= SEGS; j++) {
         if (j < SEGS) {

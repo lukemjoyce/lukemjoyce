@@ -150,11 +150,18 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 78vmin;
-  height: 78vmin;
+  width: 94vmin;
+  height: 94vmin;
   transform: translate(-50%, -50%);
   pointer-events: none;
-  z-index: 0;
+}
+
+.blob-back {
+  z-index: 0; /* behind the title — the far half of the wireframe */
+}
+
+.blob-front {
+  z-index: 2; /* in front of the title — the near half, so the name sits inside */
 }
 
 .hero-title {
