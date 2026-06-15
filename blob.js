@@ -9,9 +9,9 @@
   const frontCtx = frontCanvas.getContext("2d");
 
   const STONE = [68, 64, 60]; // var(--stone) #44403c
-  const RINGS = 26; // latitude divisions
-  const SEGS = 40; // longitude divisions
-  const AMP = 0.22; // how far the surface morphs
+  const RINGS = 22; // latitude divisions
+  const SEGS = 60; // longitude divisions
+  const AMP = 0.18; // how far the surface morphs
   const TILT = -0.38; // fixed pitch so we see it from slightly above
 
   // Unit direction for every vertex on the sphere, precomputed once.
@@ -89,7 +89,7 @@
 
         const f = focal / (z2 + camDist);
         px[i][j] = cx + x1 * f;
-        py[i][j] = cy + y1 * f;
+        py[i][j] = cy + y1 * f * 0.6;
         pz[i][j] = z2; // larger = farther
       }
     }

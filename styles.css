@@ -150,8 +150,8 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 94vmin;
-  height: 94vmin;
+  width: 80vmin;
+  height: 80vmin;
   transform: translate(-50%, -50%);
   pointer-events: none;
 }
@@ -171,6 +171,9 @@ body {
   font-weight: 300;
   letter-spacing: -0.02em;
   color: var(--stone);
+  user-select: none;          /* can't highlight/select the text */
+  -webkit-user-select: none;  /* Safari */
+  cursor: default;            /* keep the arrow cursor, not the text I-beam */
 }
 
 @media (prefers-reduced-motion: reduce) {
