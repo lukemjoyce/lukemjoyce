@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Luke M. Joyce</title>
+  <meta name="description" content="Luke M. Joyce — personal site." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <button id="menu-toggle" class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="menu">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </button>
+
+  <nav id="menu" class="menu" aria-hidden="true">
+    <ul class="menu-list">
+      <li style="--i: 0"><a href="#" class="menu-name">Luke M. Joyce</a></li>
+      <li style="--i: 1"><a href="#about">About</a></li>
+      <li style="--i: 2"><a href="#hobbies">Hobbies</a></li>
+      <li style="--i: 3"><a href="#experience">Experience</a></li>
+    </ul>
+  </nav>
+
+  <div id="overlay" class="overlay" tabindex="-1"></div>
+
+  <main class="hero">
+    <h1 class="hero-title">Luke M. Joyce</h1>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
