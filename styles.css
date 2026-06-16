@@ -26,6 +26,18 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+/* ── Starfield ──────────────────────────────────── */
+/* Above the menu (20) and overlay (10) so the stars span over the menu too,
+   below the toggle (30); click-through so it never blocks the UI. */
+.stars {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 25;
+  pointer-events: none;
+}
+
 /* ── Hamburger toggle ───────────────────────────── */
 .menu-toggle {
   position: fixed;
@@ -150,8 +162,8 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 100vmin;
-  height: 100vmin;
+  width: 89vmin;
+  height: 89vmin;
   transform: translate(-50%, -50%);
   pointer-events: none;
 }

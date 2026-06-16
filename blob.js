@@ -9,8 +9,8 @@
   const frontCtx = frontCanvas.getContext("2d");
 
   const STONE = [68, 64, 60]; // var(--stone) #44403c
-  const RINGS = 22; // latitude divisions
-  const SEGS = 60; // longitude divisions
+  const RINGS = 18; // latitude divisions
+  const SEGS = 50; // longitude divisions
   const AMP = 0.18; // how far the surface morphs
   const TILT = -0.38; // fixed pitch so we see it from slightly above
 
@@ -67,7 +67,7 @@
     const camDist = R * 3.2;
     const focal = R * 3.2;
 
-    const yaw = t * 0.5;
+    const yaw = t * 0.4;
     const cy_ = Math.cos(yaw), sy_ = Math.sin(yaw);
     const cx_ = Math.cos(TILT), sx_ = Math.sin(TILT);
 
@@ -89,7 +89,7 @@
 
         const f = focal / (z2 + camDist);
         px[i][j] = cx + x1 * f;
-        py[i][j] = cy + y1 * f * 0.6;
+        py[i][j] = cy + y1 * f * 0.80;
         pz[i][j] = z2; // larger = farther
       }
     }
