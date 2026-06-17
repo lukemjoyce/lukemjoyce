@@ -7,10 +7,12 @@
   const ctx = canvas.getContext("2d");
 
   const STONE = "68, 64, 60"; // var(--stone) #44403c
-  const DENSITY = 1 / 12000; // stars per CSS pixel of area (50% more than 1/9000)
-  const MAX_OPACITY = 0.7;
-  const SPIKE = 2.2; // prong length vs. star size (stars read smaller than dots)
-  const WAIST = 0.22; // inner-radius ratio — smaller = pointier prongs
+  const DENSITY = 1 / 18000; // stars per CSS pixel of area (50% more than 1/9000)
+  const MAX_OPACITY = 0.5;
+  const SPIKE = 3.0; // prong length vs. star size (stars read smaller than dots)
+  const WAIST = 0.14; // inner-radius ratio — smaller = pointier prongs
+  const DRIFT = 0.01; // base rightward speed (fraction of width per second)
+  const BARREL = 0.32; // how far off-center rows bow vertically at mid-screen
 
   let W = 0, H = 0, dpr = 1;
   let stars = [];
@@ -50,8 +52,18 @@
       let o = s.base + s.amp * Math.sin(t * s.speed + s.phase);
       if (o <= 0) continue;
       if (o > MAX_OPACITY) o = MAX_OPACITY;
+
+      // drift rightward at one uniform speed (a night sky moves as one),
+      // wrapping around the screen
+      const x = (s.x + t * DRIFT) % 1;
+      // barrel path: a vertical bow that peaks at mid-screen (sin πx is 0 at
+      // both edges, 1 in the middle). Rows above center (n < 0) dip down, rows
+      // below (n > 0) rise up, scaled by distance from the centerline.
+      const n = s.y - 0.5;
+      const y = s.y - n * BARREL * Math.sin(Math.PI * x);
+
       ctx.fillStyle = `rgba(${STONE}, ${o.toFixed(3)})`;
-      sparkle(s.x * W, s.y * H, s.r * SPIKE);
+      sparkle(x * W, y * H, s.r * SPIKE);
       ctx.fill();
     }
     if (!reduce) requestAnimationFrame(frame);

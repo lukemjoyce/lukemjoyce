@@ -8,7 +8,17 @@
   const backCtx = backCanvas.getContext("2d");
   const frontCtx = frontCanvas.getContext("2d");
 
-  const STONE = [68, 64, 60]; // var(--stone) #44403c
+  const TOP_COLOR = [41, 37, 36];      // #292524 — darker stone, top of the sphere
+  const BOTTOM_COLOR = [168, 162, 158]; // #a8a29e — lighter stone, bottom of the sphere
+
+  // Blend top↔bottom by vertical position. s: 0 at the bottom, 1 at the top.
+  function colorAt(s) {
+    return [
+      Math.round(BOTTOM_COLOR[0] + (TOP_COLOR[0] - BOTTOM_COLOR[0]) * s),
+      Math.round(BOTTOM_COLOR[1] + (TOP_COLOR[1] - BOTTOM_COLOR[1]) * s),
+      Math.round(BOTTOM_COLOR[2] + (TOP_COLOR[2] - BOTTOM_COLOR[2]) * s),
+    ];
+  }
   const RINGS = 18; // latitude divisions
   const SEGS = 50; // longitude divisions
   const AMP = 0.18; // how far the surface morphs
@@ -97,11 +107,15 @@
     // Far depth fades toward 0 opacity, near toward full — the 3D cue.
     // Near-side lines (depth < 0) draw on the front canvas, over the title,
     // so the name appears to sit inside the blob.
-    function stroke(ax, ay, az, bx, by, bz) {
+    // va/vb are the endpoints' vertical unit-positions (+1 top .. -1 bottom),
+    // so the stroke is tinted by its height on the sphere.
+    function stroke(ax, ay, az, bx, by, bz, va, vb) {
       const depth = (az + bz) * 0.5;
       const a = 0.07 + 0.33 * (1 - (depth + R) / (2 * R));
+      const s = ((va + vb) * 0.5 + 1) / 2; // 0 bottom .. 1 top
+      const [r, g, b] = colorAt(s);
       const c = depth < 0 ? frontCtx : backCtx;
-      c.strokeStyle = `rgba(${STONE[0]},${STONE[1]},${STONE[2]},${a.toFixed(3)})`;
+      c.strokeStyle = `rgba(${r},${g},${b},${a.toFixed(3)})`;
       c.beginPath();
       c.moveTo(ax, ay);
       c.lineTo(bx, by);
@@ -113,10 +127,14 @@
     for (let i = 0; i <= RINGS; i++) {
       for (let j = 0; j <= SEGS; j++) {
         if (j < SEGS) {
-          stroke(px[i][j], py[i][j], pz[i][j], px[i][j + 1], py[i][j + 1], pz[i][j + 1]);
+          // longitude segment: same ring, so both ends share this height
+          stroke(px[i][j], py[i][j], pz[i][j], px[i][j + 1], py[i][j + 1], pz[i][j + 1],
+            dirs[i][j][1], dirs[i][j + 1][1]);
         }
         if (i < RINGS) {
-          stroke(px[i][j], py[i][j], pz[i][j], px[i + 1][j], py[i + 1][j], pz[i + 1][j]);
+          // latitude segment: spans two rings, so it blends between heights
+          stroke(px[i][j], py[i][j], pz[i][j], px[i + 1][j], py[i + 1][j], pz[i + 1][j],
+            dirs[i][j][1], dirs[i + 1][j][1]);
         }
       }
     }

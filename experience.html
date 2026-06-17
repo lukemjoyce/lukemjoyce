@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Experience — Luke M. Joyce</title>
+  <meta name="description" content="Luke M. Joyce — experience." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=15" />
+</head>
+<body>
+  <div class="fade-curtain" aria-hidden="true"></div>
+  <canvas id="stars" class="stars" aria-hidden="true"></canvas>
+
+  <button id="menu-toggle" class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="menu">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </button>
+
+  <nav id="menu" class="menu" aria-hidden="true">
+    <ul class="menu-list">
+      <li style="--i: 0"><a href="index.html" class="menu-name">Luke M. Joyce</a></li>
+      <li style="--i: 1"><a href="index.html#about">About</a></li>
+      <li style="--i: 2"><a href="index.html#projects">Projects</a></li>
+      <li style="--i: 3"><a href="experience.html" aria-current="page">Experience</a></li>
+    </ul>
+  </nav>
+
+  <div id="overlay" class="overlay" tabindex="-1"></div>
+
+  <main class="page">
+    <h1 class="page-title">Professional Experience</h1>
+
+    <canvas id="gears" class="gears" aria-hidden="true"></canvas>
+
+    <ol class="xp-list">
+      <li class="xp-item">
+        <div class="xp-period">July 2021 - Present</div>
+        <div class="xp-body">
+          <h2 class="xp-role">Software Engineer</h2>
+          <div class="xp-org">Cotality</div>
+          <ul class="xp-points">
+            <li>
+              Designed and shipped a customer-facing geospatial insurance platform from the ground up, enabling insurers to assess 150M+ property assets against live weather data for near-real-time, portfolio-level risk — including a patented data modeling engine that defined the approach where none existed.
+            </li>
+            <li>
+              Owned and re-architected core infrastructure, cutting pipeline runtime 85%, infrastructure costs 75%, and report-generation costs over 90% through targeted optimization across the stack.
+            </li>
+            <li>
+              Led legacy system migration to microservices, drove technical hiring, and pioneered the team's adoption of agentic coding tools — establishing guardrails and standards to keep AI-accelerated output reliable at scale.
+            </li>
+          </ul>
+        </div>
+      </li>
+      <li class="xp-item">
+        <div class="xp-period">2021 — 2023</div>
+        <div class="xp-body">
+          <h2 class="xp-role">Software Engineer</h2>
+          <div class="xp-org">Company Name</div>
+          <p class="xp-desc">Short description of what you did here. Replace this with the real summary of your responsibilities and impact.</p>
+        </div>
+      </li>
+      <li class="xp-item">
+        <div class="xp-period">2019 — 2021</div>
+        <div class="xp-body">
+          <h2 class="xp-role">Junior Software Engineer</h2>
+          <div class="xp-org">Company Name</div>
+          <p class="xp-desc">Short description of what you did here. Replace this with the real summary of your responsibilities and impact.</p>
+        </div>
+      </li>
+      <li class="xp-item">
+        <div class="xp-period">2018 — 2019</div>
+        <div class="xp-body">
+          <h2 class="xp-role">Intern</h2>
+          <div class="xp-org">Company Name</div>
+          <p class="xp-desc">Short description of what you did here. Replace this with the real summary of your responsibilities and impact.</p>
+        </div>
+      </li>
+    </ol>
+  </main>
+
+  <script src="script.js?v=13"></script>
+  <script src="stars.js?v=15"></script>
+  <script src="gears.js?v=15"></script>
+</body>
+</html>

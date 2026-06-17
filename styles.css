@@ -4,6 +4,8 @@
   --stone-soft: #78716c;   /* stone-500 */
   --stone-line: #e7e5e4;   /* stone-200 */
   --ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --menu-speed: 1s;     /* how fast the menu slides in/out — the one knob */
+  --page-fade: 0.3s;   /* how fast a page fades in on load */
 }
 
 * {
@@ -34,7 +36,7 @@ body {
   inset: 0;
   width: 100%;
   height: 100%;
-  z-index: 25;
+  z-index: 5;
   pointer-events: none;
 }
 
@@ -84,7 +86,8 @@ body {
   backdrop-filter: blur(2px);
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.5s var(--ease), visibility 0.5s var(--ease);
+  transition: opacity calc(var(--menu-speed) * 0.9) var(--ease),
+    visibility calc(var(--menu-speed) * 0.9) var(--ease);
 }
 .overlay.open {
   opacity: 1;
@@ -96,14 +99,14 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 20;
+  z-index: 25;
   width: min(340px, 82vw);
   height: 100%;
   padding: 120px 40px 40px;
   background: var(--bg);
   border-right: 1px solid var(--stone-line);
   transform: translateX(-100%);
-  transition: transform 0.55s var(--ease);
+  transition: transform var(--menu-speed) var(--ease);
 }
 .menu.open {
   transform: translateX(0);
@@ -119,8 +122,11 @@ body {
 .menu-list li {
   opacity: 0;
   transform: translateX(-12px);
-  transition: opacity 0.5s var(--ease), transform 0.5s var(--ease);
-  transition-delay: 0s;
+  transition: opacity calc(var(--menu-speed) * 0.9) var(--ease),
+    transform calc(var(--menu-speed) * 0.9) var(--ease);
+  /* closing: unwind with a reverse stagger (last item leaves first),
+     mirroring the open so the close feels just as smooth */
+  transition-delay: calc((3 - var(--i)) * 0.06s);
 }
 .menu.open .menu-list li {
   opacity: 1;
@@ -188,8 +194,148 @@ body {
   cursor: default;            /* keep the arrow cursor, not the text I-beam */
 }
 
+/* ── Page cross-fade (through white) ────────────── */
+/* A full-screen white "curtain" above everything. On load it starts opaque
+   and fades out, so the whole page (UI included) reveals from white. On
+   navigating away, script.js adds .leaving to fade it back to white before
+   the browser actually loads the next page — so the two pages cross-fade
+   through white. pointer-events stay off so it never blocks clicks. */
+.fade-curtain {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: var(--bg);
+  pointer-events: none;
+  opacity: 0;
+  animation: curtain-out var(--page-fade) var(--ease) both;
+}
+.fade-curtain.leaving {
+  animation: curtain-in var(--page-fade) var(--ease) forwards;
+}
+
+@keyframes curtain-out {
+  from { opacity: 1; }
+  to   { opacity: 0; }
+}
+@keyframes curtain-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* ── Experience page ────────────────────────────── */
+/* Let the page grow taller than the viewport so it scrolls naturally;
+   the fixed stars / menu / toggle stay put while the list scrolls. */
+.page {
+  position: relative;
+  z-index: 1;
+  min-height: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 132px 32px 96px;
+}
+
+.page-title {
+  font-size: clamp(1.6rem, 5vw, 2.6rem);
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  color: var(--stone);
+  margin-bottom: 20px;
+}
+
+/* meshing gear motif tucked under the heading */
+.gears {
+  display: block;
+  width: 100%;
+  height: 150px;
+  margin-bottom: 44px;
+}
+
+.xp-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.xp-item {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 24px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid var(--stone-line);
+}
+.xp-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.xp-period {
+  color: var(--stone-soft);
+  font-size: 0.82rem;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  padding-top: 0.35em;
+}
+
+.xp-role {
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: var(--stone);
+}
+
+.xp-org {
+  margin-top: 4px;
+  color: var(--stone-soft);
+  font-size: 0.95rem;
+  font-weight: 300;
+}
+
+.xp-desc {
+  margin-top: 12px;
+  color: var(--stone-soft);
+  font-size: 0.92rem;
+  font-weight: 300;
+  line-height: 1.7;
+}
+
+/* bulleted accomplishments — same muted type as .xp-desc, with a thin dash
+   marker that fits the minimalist look */
+.xp-points {
+  margin-top: 12px;
+  padding-left: 1.2em;
+  list-style: none;
+  color: var(--stone-soft);
+  font-size: 0.92rem;
+  font-weight: 300;
+  line-height: 1.7;
+}
+.xp-points li {
+  position: relative;
+}
+.xp-points li + li {
+  margin-top: 10px;
+}
+.xp-points li::before {
+  content: "—";
+  position: absolute;
+  left: -1.2em;
+  color: var(--stone-line);
+}
+
+@media (max-width: 560px) {
+  .xp-item {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  .xp-period {
+    padding-top: 0;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   * {
     transition-duration: 0.001s !important;
+    animation-duration: 0.001s !important;
   }
 }
