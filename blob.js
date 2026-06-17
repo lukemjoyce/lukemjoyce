@@ -38,6 +38,21 @@
     dirs.push(row);
   }
 
+  // World coastlines (Natural Earth 110m, from coastline.js) turned into unit
+  // direction vectors with the north pole up — so they ride the same morphing
+  // surface and rotation as the wireframe, drawing an Earth onto the shell.
+  function latlngToVec(lng, lat) {
+    const la = (lat * Math.PI) / 180, lo = (lng * Math.PI) / 180;
+    const cl = Math.cos(la);
+    // negate the vertical so the north pole points up on screen (canvas y is
+    // flipped); longitude/screen-x is unaffected, so no east-west mirroring
+    return [cl * Math.cos(lo), -Math.sin(la), cl * Math.sin(lo)];
+  }
+  const coast = (window.COASTLINE || []).map((line) =>
+    line.map(([lng, lat]) => latlngToVec(lng, lat))
+  );
+  const COAST = [55, 51, 47]; // a touch darker than the grid so land reads
+
   // Smooth, organic radial displacement — layered sines acting like noise.
   function morph(x, y, z, t) {
     return (
@@ -77,7 +92,7 @@
     const camDist = R * 3.2;
     const focal = R * 3.2;
 
-    const yaw = t * 0.4;
+    const yaw = t * 0.25;
     const cy_ = Math.cos(yaw), sy_ = Math.sin(yaw);
     const cx_ = Math.cos(TILT), sx_ = Math.sin(TILT);
 
@@ -136,6 +151,37 @@
           stroke(px[i][j], py[i][j], pz[i][j], px[i + 1][j], py[i + 1][j], pz[i + 1][j],
             dirs[i][j][1], dirs[i + 1][j][1]);
         }
+      }
+    }
+
+    // Coastlines on the shell — each point morphed/rotated/projected like a
+    // vertex, then the polyline stroked segment by segment with the same
+    // depth fade and front/back split as the wireframe.
+    for (const line of coast) {
+      let hx = 0, hy = 0, hz = 0, has = false;
+      for (let k = 0; k < line.length; k++) {
+        const d = line[k];
+        const rad = R * (1 + AMP * morph(d[0], d[1], d[2], t));
+        const x = d[0] * rad, y = d[1] * rad, z = d[2] * rad;
+        const x1 = x * cy_ + z * sy_;
+        const z1 = -x * sy_ + z * cy_;
+        const y1 = y * cx_ - z1 * sx_;
+        const z2 = y * sx_ + z1 * cx_;
+        const f = focal / (z2 + camDist);
+        const sx = cx + x1 * f;
+        const sy = cy + y1 * f * 0.8;
+
+        if (has) {
+          const depth = (hz + z2) * 0.5;
+          const a = 0.12 + 0.6 * (1 - (depth + R) / (2 * R));
+          const c = depth < 0 ? frontCtx : backCtx;
+          c.strokeStyle = `rgba(${COAST[0]},${COAST[1]},${COAST[2]},${a.toFixed(3)})`;
+          c.beginPath();
+          c.moveTo(hx, hy);
+          c.lineTo(sx, sy);
+          c.stroke();
+        }
+        hx = sx; hy = sy; hz = z2; has = true;
       }
     }
 

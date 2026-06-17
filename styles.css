@@ -245,7 +245,7 @@ body {
 /* meshing gear motif tucked under the heading */
 .gears {
   display: block;
-  width: 100%;
+  width: 70%;
   height: 150px;
   margin-bottom: 44px;
 }

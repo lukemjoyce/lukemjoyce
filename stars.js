@@ -1,36 +1,59 @@
-/* Teeny tiny twinkling stone-colored stars across the whole page —
-   a transparent full-screen canvas layered above the UI (but click-through),
-   so the field also spans over the menu when it's open. */
+/* "Immersive & deep" starfield — a real 3D field, perspective-projected, with
+   the camera panning sideways. Each star has a true depth z; near ones are
+   large, dark and sweep across fast, far ones are tiny faint specks that barely
+   move — genuine parallax, so it reads as infinite depth rather than a flat
+   sheet. Stars that slide off the right are recycled to the left at a fresh
+   random depth, so the drift never ends. Grey marks on white; a transparent
+   full-screen canvas above the UI, click-through. */
 (() => {
   const canvas = document.getElementById("stars");
   if (!canvas) return;
   const ctx = canvas.getContext("2d");
 
   const STONE = "68, 64, 60"; // var(--stone) #44403c
-  const DENSITY = 1 / 18000; // stars per CSS pixel of area (50% more than 1/9000)
-  const MAX_OPACITY = 0.5;
-  const SPIKE = 3.0; // prong length vs. star size (stars read smaller than dots)
-  const WAIST = 0.14; // inner-radius ratio — smaller = pointier prongs
-  const DRIFT = 0.01; // base rightward speed (fraction of width per second)
-  const BARREL = 0.32; // how far off-center rows bow vertically at mid-screen
+  const DENSITY = 1 / 5000;   // stars per CSS pixel of area
+  const MAX_OPACITY = 0.65;   // most opaque (darkest) a near star reaches
+  const SPIKE = 2.6;          // prong length vs. size, for near-star glints
+  const WAIST = 0.14;         // inner-radius ratio — smaller = pointier prongs
+
+  const FOCAL = 0.62;  // lens: bigger = more zoom / stronger parallax
+  const NEAR = 0.15;   // nearest depth (fast, big)
+  const FAR = 3.2;     // farthest depth (slow, tiny, faint)
+  const SPEED = 0.05;  // world units/sec the camera pans (drift rate)
+  const BASE = 0.5;    // base size; on-screen radius ≈ BASE / z
+  const MARGIN = 30;   // off-screen recycle slack in px
 
   let W = 0, H = 0, dpr = 1;
+  let cx = 0, cy = 0, PS = 1; // projection: screen = center + world/z * PS
   let stars = [];
+  let lastT = 0;
+
+  const randZ = () => NEAR + (FAR - NEAR) * Math.sqrt(Math.random()); // skew far
+
+  // Place a star at a target screen point + depth, backing out world x,y.
+  function set(s, sx, sy, z) {
+    s.z = z;
+    s.x = ((sx - cx) * z) / PS;
+    s.y = ((sy - cy) * z) / PS;
+  }
 
   function build() {
     const count = Math.round(W * H * DENSITY);
     stars = [];
     for (let i = 0; i < count; i++) {
-      stars.push({
-        x: Math.random(), // fraction of width, so resize just remaps
-        y: Math.random(),
-        r: 0.5 + Math.random() * 2, // random ~0.5–1.6px (min same, max 50% smaller)
-        base: 0.1 + Math.random() * 0.3, // dim baseline
-        amp: 0.2 + Math.random() * 0.4, // twinkle depth
-        speed: 0.6 + Math.random() * 1.8, // twinkle rate
+      const s = {
+        speed: 0.5 + Math.random() * 1.4, // twinkle rate
         phase: Math.random() * Math.PI * 2,
-      });
+        tw: Math.random() < 0.3 ? 0.12 : 0, // sparse gentle twinkle
+      };
+      set(s, Math.random() * W, Math.random() * H, randZ());
+      stars.push(s);
     }
+  }
+
+  // Re-enter from just off the left edge, fresh depth + row.
+  function recycle(s) {
+    set(s, -MARGIN, Math.random() * H, randZ());
   }
 
   function resize() {
@@ -40,37 +63,57 @@
     canvas.width = Math.round(W * dpr);
     canvas.height = Math.round(H * dpr);
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    cx = W / 2;
+    cy = H / 2;
+    PS = Math.max(W, H) * FOCAL;
     build();
   }
 
   const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   function frame(now) {
-    const t = now * 0.001;
+    const tSec = now * 0.001;
+    let dt = tSec - lastT;
+    lastT = tSec;
+    if (dt > 0.1) dt = 0.1; // clamp big gaps (e.g. tab was backgrounded)
+
     ctx.clearRect(0, 0, W, H);
+
     for (const s of stars) {
-      let o = s.base + s.amp * Math.sin(t * s.speed + s.phase);
-      if (o <= 0) continue;
-      if (o > MAX_OPACITY) o = MAX_OPACITY;
+      if (!reduce) s.x += SPEED * dt; // camera pan → world slides right
 
-      // drift rightward at one uniform speed (a night sky moves as one),
-      // wrapping around the screen
-      const x = (s.x + t * DRIFT) % 1;
-      // barrel path: a vertical bow that peaks at mid-screen (sin πx is 0 at
-      // both edges, 1 in the middle). Rows above center (n < 0) dip down, rows
-      // below (n > 0) rise up, scaled by distance from the centerline.
-      const n = s.y - 0.5;
-      const y = s.y - n * BARREL * Math.sin(Math.PI * x);
+      const p = PS / s.z;            // perspective scale: near = big
+      const sx = cx + s.x * p;
+      const sy = cy + s.y * p;
 
-      ctx.fillStyle = `rgba(${STONE}, ${o.toFixed(3)})`;
-      sparkle(x * W, y * H, s.r * SPIKE);
-      ctx.fill();
+      if (sx > W + MARGIN) { recycle(s); continue; }
+
+      const near01 = (FAR - s.z) / (FAR - NEAR); // 1 near .. 0 far
+      let a = 0.06 + near01 * 0.5;               // far fades into white
+      if (s.tw) a += s.tw * Math.sin(tSec * s.speed + s.phase);
+      if (a <= 0.004) continue;
+      if (a > MAX_OPACITY) a = MAX_OPACITY;
+
+      let r = BASE / s.z;
+      if (r > 4) r = 4;
+
+      ctx.fillStyle = `rgba(${STONE}, ${a.toFixed(3)})`;
+      if (s.z < 0.7) {
+        // near → a 4-point glint
+        sparkle(sx, sy, r * SPIKE);
+        ctx.fill();
+      } else {
+        // far → a tiny point
+        ctx.beginPath();
+        ctx.arc(sx, sy, Math.max(0.4, r), 0, Math.PI * 2);
+        ctx.fill();
+      }
     }
+
     if (!reduce) requestAnimationFrame(frame);
   }
 
-  // Classic 4-point twinkle: long thin prongs (up/right/down/left) with a
-  // tight inner waist, drawn as an 8-vertex star.
+  // Classic 4-point twinkle: long thin prongs around a tight inner waist.
   function sparkle(x, y, outer) {
     const inner = outer * WAIST;
     ctx.beginPath();

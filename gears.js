@@ -24,8 +24,10 @@
   const SPEED = 0.22;   // rad/s of the first gear (the rest derive from meshing)
   const PAD = 10;       // breathing room inside the canvas
 
-  const IRON = "120, 92, 72"; // warm oxidized-iron stroke
-  const PIT = "74, 54, 42";   // darker rust speckle
+  const STONE = "68, 64, 60";    // #44403c — gear body fill
+  const LINE = "255, 255, 255";  // #a8a29e — lighter stone for internal lines
+  const SPECK = "255, 255, 255"; // white flecks
+  const DARK = "26, 23, 21";     // #1a1715 — corrosion / pits, near-black stone
 
   let W = 0, H = 0, dpr = 1;
   let gears = [];
@@ -74,26 +76,57 @@
       k.py = k.y * f + oy;
       k.pr = k.R * f;     // scaled pitch radius
       k.mod = MODULE * f; // scaled tooth size
-      k.pits = makePits(k);
+      k.grunge = makeGrunge(k);
     }
     gears = g;
   }
 
-  // Static rust speckles in gear-local coords, so they rotate with the gear.
-  function makePits(k) {
-    const n = Math.min(34, Math.round(k.pr * 0.7));
-    const pits = [];
-    for (let i = 0; i < n; i++) {
+  // Static grunge in gear-local coords (so it rotates with the metal): soft
+  // dark corrosion patches, two-tone speckles (dark pits + light flecks), and
+  // a few fine scratches.
+  function makeGrunge(k) {
+    const R = k.pr;
+    const spot = () => {
       const ang = Math.random() * Math.PI * 2;
-      const rad = (0.16 + Math.random() * 0.78) * k.pr;
-      pits.push({
-        x: Math.cos(ang) * rad,
-        y: Math.sin(ang) * rad,
-        r: 0.3 + Math.random() * 1.1,
-        o: 0.05 + Math.random() * 0.16,
+      const rad = Math.random() * R;
+      return [Math.cos(ang) * rad, Math.sin(ang) * rad];
+    };
+
+    const grime = [];
+    const gn = 4 + Math.round(Math.random() * 3);
+    for (let i = 0; i < gn; i++) {
+      const [x, y] = spot();
+      grime.push({ x, y, r: (0.18 + Math.random() * 0.42) * R, o: 0.05 + Math.random() * 0.13 });
+    }
+
+    const specks = [];
+    const sn = Math.min(80, Math.round(R * 1.4));
+    for (let i = 0; i < sn; i++) {
+      const [x, y] = spot();
+      specks.push({
+        x, y,
+        r: 0.25 + Math.random() * 1.2,
+        o: 0.06 + Math.random() * 0.24,
+        dark: Math.random() < 0.6, // mostly pits, some bright flecks
       });
     }
-    return pits;
+
+    const scratches = [];
+    const cn = 3 + Math.round(Math.random() * 4);
+    for (let i = 0; i < cn; i++) {
+      const [x, y] = spot();
+      const dir = Math.random() * Math.PI * 2;
+      const len = (0.12 + Math.random() * 0.32) * R;
+      scratches.push({
+        x, y,
+        dx: Math.cos(dir) * len,
+        dy: Math.sin(dir) * len,
+        o: 0.06 + Math.random() * 0.16,
+        light: Math.random() < 0.4,
+      });
+    }
+
+    return { grime, specks, scratches };
   }
 
   function resize() {
@@ -112,9 +145,13 @@
     const Rt = R + mod;        // tip (addendum)
     const Rr = R - mod * 1.1;  // root (dedendum, a touch deeper)
     const step = (Math.PI * 2) / teeth;
-    // fraction of each tooth-pitch: rise, tip, fall, gap, gap-mid
+    // Squared teeth with a gentle taper — wider at the root than the tip, like
+    // a real cog. The flat top is centred on each tooth-pitch angle (a0), where
+    // the meshing-phase math expects the tip, so neighbours line up. The tip
+    // edges sit at ±0.20 of the pitch and the root edges flare out to ±0.28, so
+    // the flanks lean outward toward the root (with a little gap clearance).
     const stops = [
-      [0.0, Rr], [0.2, Rt], [0.4, Rt], [0.6, Rr], [0.8, Rr],
+      [0.0, Rt], [0.24, Rt], [0.4, Rr], [0.72, Rr], [0.80, Rt],
     ];
     ctx.beginPath();
     for (let k = 0; k < teeth; k++) {
@@ -134,14 +171,49 @@
     ctx.translate(k.px, k.py);
     ctx.rotate(k.phase + k.speed * T);
 
-    // body: faint fill + crisp outline
+    // body: solid stone fill, no outline (the fill is the silhouette)
     gearPath(k.pr, k.mod, k.teeth);
-    ctx.fillStyle = `rgba(${IRON}, 0.05)`;
+    ctx.fillStyle = `rgba(${STONE}, 0.92)`;
     ctx.fill();
+
+    // grunge, clipped to the body so it bites into the tooth edges too
+    gearPath(k.pr, k.mod, k.teeth);
+    ctx.save();
+    ctx.clip();
+    const G = k.grunge;
+
+    // soft corrosion patches (mottling)
+    for (const p of G.grime) {
+      const grad = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r);
+      grad.addColorStop(0, `rgba(${DARK}, ${p.o.toFixed(3)})`);
+      grad.addColorStop(1, `rgba(${DARK}, 0)`);
+      ctx.fillStyle = grad;
+      ctx.fillRect(p.x - p.r, p.y - p.r, p.r * 2, p.r * 2);
+    }
+
+    // scratches
+    ctx.lineWidth = 0.6;
+    for (const s of G.scratches) {
+      ctx.strokeStyle = `rgba(${s.light ? SPECK : DARK}, ${s.o.toFixed(3)})`;
+      ctx.beginPath();
+      ctx.moveTo(s.x, s.y);
+      ctx.lineTo(s.x + s.dx, s.y + s.dy);
+      ctx.stroke();
+    }
+
+    // two-tone speckles
+    for (const p of G.specks) {
+      ctx.fillStyle = `rgba(${p.dark ? DARK : SPECK}, ${p.o.toFixed(3)})`;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fill();
+    }
+    ctx.restore();
+
+    // internal detail lines, in a lighter stone (crisp, over the grunge)
     ctx.lineWidth = Math.max(1, k.mod * 0.45);
     ctx.lineJoin = "round";
-    ctx.strokeStyle = `rgba(${IRON}, 0.7)`;
-    ctx.stroke();
+    ctx.strokeStyle = `rgba(${LINE}, 0.85)`;
 
     // hub + centre hole
     ctx.beginPath();
@@ -161,14 +233,6 @@
         ctx.lineTo(Math.cos(a) * k.pr * 0.78, Math.sin(a) * k.pr * 0.78);
       }
       ctx.stroke();
-    }
-
-    // rust pits
-    for (const p of k.pits) {
-      ctx.fillStyle = `rgba(${PIT}, ${p.o.toFixed(3)})`;
-      ctx.beginPath();
-      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-      ctx.fill();
     }
 
     ctx.restore();
