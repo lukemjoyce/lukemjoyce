@@ -1,11 +1,23 @@
 {
-  "updated": "2026-06-19T16:10:53.804Z",
+  "updated": "2026-06-19T19:01:39.150Z",
   "recent": [
     {
-      "id": "3AUP3FpNi8ORH8HyPZsq6f",
-      "name": "Elktorn",
+      "id": "77J0xRqv8ZpgPLWaUKWQzv",
+      "name": "Turn Me Inside - Zero 7 Remix",
+      "artists": "Vegyn, Léa Sen, Zero 7",
+      "url": "https://open.spotify.com/track/77J0xRqv8ZpgPLWaUKWQzv"
+    },
+    {
+      "id": "5yDHgR0zM1hmjKzj34u2qM",
+      "name": "To The Sky",
       "artists": "Loukeman",
-      "url": "https://open.spotify.com/track/3AUP3FpNi8ORH8HyPZsq6f"
+      "url": "https://open.spotify.com/track/5yDHgR0zM1hmjKzj34u2qM"
+    },
+    {
+      "id": "2txjhK0BwtEE8mXZNrPQ89",
+      "name": "6ix",
+      "artists": "Loukeman",
+      "url": "https://open.spotify.com/track/2txjhK0BwtEE8mXZNrPQ89"
     },
     {
       "id": "1gMn0jk3wTRbiSA8NFNyMa",
@@ -14,10 +26,10 @@
       "url": "https://open.spotify.com/track/1gMn0jk3wTRbiSA8NFNyMa"
     },
     {
-      "id": "62o1VaYRuqKQRJ2s64nY9l",
-      "name": "Won't U",
+      "id": "63gOTfEniAdF7IsVy6PSK4",
+      "name": "Manifester",
       "artists": "Loukeman",
-      "url": "https://open.spotify.com/track/62o1VaYRuqKQRJ2s64nY9l"
+      "url": "https://open.spotify.com/track/63gOTfEniAdF7IsVy6PSK4"
     },
     {
       "id": "2z0KIKHQvp3snXOVnEXwpp",
@@ -26,28 +38,16 @@
       "url": "https://open.spotify.com/track/2z0KIKHQvp3snXOVnEXwpp"
     },
     {
-      "id": "1osOQXNTHtmz2oLzPwPQB6",
-      "name": "Gorgeous Stuff",
-      "artists": "Loukeman",
-      "url": "https://open.spotify.com/track/1osOQXNTHtmz2oLzPwPQB6"
+      "id": "2z0KIKHQvp3snXOVnEXwpp",
+      "name": "High speed calm air tonight",
+      "artists": "ML Buch",
+      "url": "https://open.spotify.com/track/2z0KIKHQvp3snXOVnEXwpp"
     },
     {
-      "id": "7J3mkvdwNFxcLdGcAiK9GW",
-      "name": "Coping Mechanism",
-      "artists": "Car Culture, Physical Therapy",
-      "url": "https://open.spotify.com/track/7J3mkvdwNFxcLdGcAiK9GW"
-    },
-    {
-      "id": "3rt36njbDLJGdvdySoH0uQ",
-      "name": "Makeshift Tourniquet",
-      "artists": "Vegyn",
-      "url": "https://open.spotify.com/track/3rt36njbDLJGdvdySoH0uQ"
-    },
-    {
-      "id": "13aWgBKCrT1pwI8cbcSEzD",
-      "name": "Sky Writing",
-      "artists": "Fade Evare",
-      "url": "https://open.spotify.com/track/13aWgBKCrT1pwI8cbcSEzD"
+      "id": "2z0KIKHQvp3snXOVnEXwpp",
+      "name": "High speed calm air tonight",
+      "artists": "ML Buch",
+      "url": "https://open.spotify.com/track/2z0KIKHQvp3snXOVnEXwpp"
     }
   ],
   "top": [
@@ -94,10 +94,10 @@
       "url": "https://open.spotify.com/track/2BuBXn15gj4MNYZydyWgrk"
     },
     {
-      "id": "2A5cwtDZpk7RvsPolrF4UL",
-      "name": "Excavator",
-      "artists": "Don Toliver",
-      "url": "https://open.spotify.com/track/2A5cwtDZpk7RvsPolrF4UL"
+      "id": "63gOTfEniAdF7IsVy6PSK4",
+      "name": "Manifester",
+      "artists": "Loukeman",
+      "url": "https://open.spotify.com/track/63gOTfEniAdF7IsVy6PSK4"
     }
   ]
 }
