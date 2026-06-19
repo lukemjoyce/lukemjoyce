@@ -1,0 +1,43 @@
+name: Update Spotify
+
+on:
+  schedule:
+    - cron: "0 * * * *" # hourly (GitHub may delay scheduled runs)
+  workflow_dispatch: {} # lets you trigger it manually from the Actions tab
+
+permissions:
+  contents: write
+
+# Don't pile up overlapping runs
+concurrency:
+  group: update-spotify
+  cancel-in-progress: true
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Fetch tracks
+        env:
+          SPOTIFY_CLIENT_ID: ${{ secrets.SPOTIFY_CLIENT_ID }}
+          SPOTIFY_CLIENT_SECRET: ${{ secrets.SPOTIFY_CLIENT_SECRET }}
+          SPOTIFY_REFRESH_TOKEN: ${{ secrets.SPOTIFY_REFRESH_TOKEN }}
+        run: node scripts/fetch-spotify.js
+
+      - name: Commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add spotify.json
+          if git diff --staged --quiet; then
+            echo "No changes."
+          else
+            git commit -m "Update Spotify tracks"
+            git push
+          fi

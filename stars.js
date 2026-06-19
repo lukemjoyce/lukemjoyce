@@ -10,7 +10,7 @@
   if (!canvas) return;
   const ctx = canvas.getContext("2d");
 
-  const STONE = "68, 64, 60"; // var(--stone) #44403c
+  const DEF_INK = [68, 64, 60]; // fallback when the theme module isn't present
   const DENSITY = 1 / 5000;   // stars per CSS pixel of area
   const MAX_OPACITY = 0.65;   // most opaque (darkest) a near star reaches
   const SPIKE = 2.6;          // prong length vs. size, for near-star glints
@@ -79,6 +79,9 @@
 
     ctx.clearRect(0, 0, W, H);
 
+    const ink = (window.THEME && window.THEME.ink) || DEF_INK;
+    const col = `${ink[0] | 0}, ${ink[1] | 0}, ${ink[2] | 0}`;
+
     for (const s of stars) {
       if (!reduce) s.x += SPEED * dt; // camera pan → world slides right
 
@@ -97,7 +100,7 @@
       let r = BASE / s.z;
       if (r > 4) r = 4;
 
-      ctx.fillStyle = `rgba(${STONE}, ${a.toFixed(3)})`;
+      ctx.fillStyle = `rgba(${col}, ${a.toFixed(3)})`;
       if (s.z < 0.7) {
         // near → a 4-point glint
         sparkle(sx, sy, r * SPIKE);

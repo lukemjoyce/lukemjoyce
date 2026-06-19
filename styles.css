@@ -28,18 +28,6 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-/* ── Starfield ──────────────────────────────────── */
-/* Above the menu (20) and overlay (10) so the stars span over the menu too,
-   below the toggle (30); click-through so it never blocks the UI. */
-.stars {
-  position: fixed;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 5;
-  pointer-events: none;
-}
-
 /* ── Hamburger toggle ───────────────────────────── */
 .menu-toggle {
   position: fixed;
@@ -126,7 +114,7 @@ body {
     transform calc(var(--menu-speed) * 0.9) var(--ease);
   /* closing: unwind with a reverse stagger (last item leaves first),
      mirroring the open so the close feels just as smooth */
-  transition-delay: calc((3 - var(--i)) * 0.06s);
+  transition-delay: calc((4 - var(--i)) * 0.06s);
 }
 .menu.open .menu-list li {
   opacity: 1;
@@ -330,6 +318,137 @@ body {
   }
   .xp-period {
     padding-top: 0;
+  }
+}
+
+/* ── Music page (Spotify widget) ────────────────── */
+.page-lead {
+  color: var(--stone-soft);
+  font-size: 0.92rem;
+  font-weight: 300;
+  line-height: 1.7;
+  margin-bottom: 40px;
+  max-width: 52ch;
+}
+
+.sp-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+}
+
+.sp-col-title {
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--stone-soft);
+  margin-bottom: 14px;
+}
+
+.sp-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.sp-track {
+  border-bottom: 1px solid var(--stone-line);
+}
+.sp-track:last-child {
+  border-bottom: none;
+}
+
+.sp-row {
+  display: grid;
+  grid-template-columns: 24px 1fr;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 2px;
+}
+
+.sp-play {
+  width: 24px;
+  height: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: 1px solid var(--stone-line);
+  border-radius: 50%;
+  color: var(--stone-soft);
+  font-size: 0.55rem;
+  line-height: 1;
+  padding-left: 1px; /* optically centre the play glyph */
+  cursor: pointer;
+  flex: none;
+  transition: color 0.25s var(--ease), border-color 0.25s var(--ease);
+}
+.sp-play:hover {
+  color: var(--stone);
+  border-color: var(--stone-soft);
+}
+.sp-track.open .sp-play {
+  color: var(--stone);
+  border-color: var(--stone);
+}
+
+.sp-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+.sp-name,
+.sp-artist {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.sp-name {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: var(--stone);
+}
+.sp-artist {
+  font-size: 0.78rem;
+  font-weight: 300;
+  color: var(--stone-soft);
+}
+
+.sp-embed {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.4s var(--ease);
+}
+.sp-track.open .sp-embed {
+  max-height: 96px;
+  padding-bottom: 12px;
+}
+.sp-embed iframe {
+  width: 100%;
+  border: 0;
+  border-radius: 12px;
+  display: block;
+}
+
+.sp-updated {
+  margin-top: 36px;
+  color: var(--stone-soft);
+  font-size: 0.72rem;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+}
+.sp-empty {
+  color: var(--stone-soft);
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+
+@media (max-width: 560px) {
+  .sp-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
   }
 }
 

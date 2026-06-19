@@ -24,10 +24,11 @@
   const SPEED = 0.22;   // rad/s of the first gear (the rest derive from meshing)
   const PAD = 10;       // breathing room inside the canvas
 
-  const STONE = "68, 64, 60";    // #44403c — gear body fill
-  const LINE = "255, 255, 255";  // #a8a29e — lighter stone for internal lines
-  const SPECK = "255, 255, 255"; // white flecks
-  const DARK = "26, 23, 21";     // #1a1715 — corrosion / pits, near-black stone
+  const DEF_STONE = "68, 64, 60"; // fallback gear body fill (theme overrides)
+  const LINE = "255, 255, 255";   // white internal lines
+  const SPECK = "255, 255, 255";  // white flecks
+  const DEF_DARK = "26, 23, 21";  // fallback corrosion / pits (theme overrides)
+  const rgbStr = (c) => `${c[0] | 0}, ${c[1] | 0}, ${c[2] | 0}`;
 
   let W = 0, H = 0, dpr = 1;
   let gears = [];
@@ -167,6 +168,11 @@
   }
 
   function drawGear(k, T) {
+    // body + corrosion colours follow the page theme (lines/flecks stay white)
+    const th = window.THEME;
+    const STONE = th ? rgbStr(th.ink) : DEF_STONE;
+    const DARK = th ? rgbStr(th.dark) : DEF_DARK;
+
     ctx.save();
     ctx.translate(k.px, k.py);
     ctx.rotate(k.phase + k.speed * T);

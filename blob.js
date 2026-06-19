@@ -8,20 +8,36 @@
   const backCtx = backCanvas.getContext("2d");
   const frontCtx = frontCanvas.getContext("2d");
 
-  const TOP_COLOR = [41, 37, 36];      // #292524 — darker stone, top of the sphere
-  const BOTTOM_COLOR = [168, 162, 158]; // #a8a29e — lighter stone, bottom of the sphere
+  // The title is HTML text sitting between the two canvases. To make the
+  // near-side strands turn white exactly where they cross a letter, we redraw
+  // the title into an offscreen glyph mask, and redraw the front strands into
+  // an opaque-white buffer; intersecting the two leaves white only on
+  // line ∩ letter, which we then lay back over the stone front lines.
+  const title = document.querySelector(".hero-title");
+  const maskCanvas = document.createElement("canvas"); // white glyphs
+  const maskCtx = maskCanvas.getContext("2d");
+  const whiteBuf = document.createElement("canvas");   // opaque-white front strands
+  const whiteCtx = whiteBuf.getContext("2d");
+
+  // Gradient ends come from the page theme (top darker, bottom lighter); fall
+  // back to stone if the theme module isn't present.
+  const DEF_TOP = [41, 37, 36];      // #292524
+  const DEF_BOTTOM = [168, 162, 158]; // #a8a29e
 
   // Blend top↔bottom by vertical position. s: 0 at the bottom, 1 at the top.
   function colorAt(s) {
+    const th = window.THEME;
+    const top = th ? th.blobTop : DEF_TOP;
+    const bot = th ? th.blobBottom : DEF_BOTTOM;
     return [
-      Math.round(BOTTOM_COLOR[0] + (TOP_COLOR[0] - BOTTOM_COLOR[0]) * s),
-      Math.round(BOTTOM_COLOR[1] + (TOP_COLOR[1] - BOTTOM_COLOR[1]) * s),
-      Math.round(BOTTOM_COLOR[2] + (TOP_COLOR[2] - BOTTOM_COLOR[2]) * s),
+      Math.round(bot[0] + (top[0] - bot[0]) * s),
+      Math.round(bot[1] + (top[1] - bot[1]) * s),
+      Math.round(bot[2] + (top[2] - bot[2]) * s),
     ];
   }
   const RINGS = 18; // latitude divisions
   const SEGS = 50; // longitude divisions
-  const AMP = 0.18; // how far the surface morphs
+  const AMP = 0.15; // how far the surface morphs
   const TILT = -0.38; // fixed pitch so we see it from slightly above
 
   // Unit direction for every vertex on the sphere, precomputed once.
@@ -51,7 +67,7 @@
   const coast = (window.COASTLINE || []).map((line) =>
     line.map(([lng, lat]) => latlngToVec(lng, lat))
   );
-  const COAST = [55, 51, 47]; // a touch darker than the grid so land reads
+  const DEF_COAST = [55, 51, 47]; // fallback when the theme module isn't present
 
   // Smooth, organic radial displacement — layered sines acting like noise.
   function morph(x, y, z, t) {
@@ -65,19 +81,65 @@
   }
 
   let W = 0, H = 0, dpr = 1;
+
+  // Redraw the title into the mask in opaque white, positioned exactly over
+  // where the on-screen <h1> sits relative to the blob canvas.
+  function buildTextMask() {
+    if (!title) return;
+    maskCtx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    maskCtx.clearRect(0, 0, W, H);
+    const cr = frontCanvas.getBoundingClientRect();
+    const tr = title.getBoundingClientRect();
+    const cs = getComputedStyle(title);
+    maskCtx.fillStyle = "#fff";
+    maskCtx.textAlign = "center";
+    maskCtx.textBaseline = "alphabetic";
+    maskCtx.font = `${cs.fontWeight} ${cs.fontSize} ${cs.fontFamily}`;
+    try { maskCtx.letterSpacing = cs.letterSpacing; } catch (e) {}
+
+    const text = title.textContent;
+    const x = tr.left + tr.width / 2 - cr.left;
+    // Put the baseline where the browser puts the <h1>'s: line-box top +
+    // half-leading + font ascent. Using the real ascent/descent (not a
+    // "middle" guess) keeps the mask glyphs locked onto the HTML glyphs.
+    const m = maskCtx.measureText(text);
+    const asc = m.fontBoundingBoxAscent, desc = m.fontBoundingBoxDescent;
+    let baseline;
+    if (Number.isFinite(asc) && Number.isFinite(desc)) {
+      baseline = tr.top - cr.top + (tr.height - (asc + desc)) / 2 + asc;
+    } else {
+      maskCtx.textBaseline = "middle"; // older browsers w/o font metrics
+      baseline = tr.top - cr.top + tr.height / 2;
+    }
+    maskCtx.fillText(text, x, baseline);
+  }
+
   function resize() {
     dpr = Math.min(window.devicePixelRatio || 1, 2);
     const r = backCanvas.getBoundingClientRect();
     W = r.width;
     H = r.height;
-    for (const c of [backCanvas, frontCanvas]) {
+    for (const c of [backCanvas, frontCanvas, maskCanvas, whiteBuf]) {
       c.width = Math.round(W * dpr);
       c.height = Math.round(H * dpr);
       c.getContext("2d").setTransform(dpr, 0, 0, dpr, 0, 0);
     }
+    whiteCtx.strokeStyle = "#fff"; // opaque white strands for the knockout
+    whiteCtx.lineWidth = 1;
+    buildTextMask();
   }
   resize();
   window.addEventListener("resize", resize);
+  // Web font load changes glyph metrics — rebuild the mask once it's ready.
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(buildTextMask);
+
+  // Re-stroke a near-side segment into the opaque-white buffer.
+  function whiteSeg(ax, ay, bx, by) {
+    whiteCtx.beginPath();
+    whiteCtx.moveTo(ax, ay);
+    whiteCtx.lineTo(bx, by);
+    whiteCtx.stroke();
+  }
 
   const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
@@ -85,6 +147,7 @@
     const t = now * 0.0009;
     backCtx.clearRect(0, 0, W, H);
     frontCtx.clearRect(0, 0, W, H);
+    whiteCtx.clearRect(0, 0, W, H);
 
     const cx = W / 2;
     const cy = H / 2;
@@ -135,10 +198,11 @@
       c.moveTo(ax, ay);
       c.lineTo(bx, by);
       c.stroke();
+      if (c === frontCtx) whiteSeg(ax, ay, bx, by); // mirror near strands for the knockout
     }
 
-    backCtx.lineWidth = 1;
-    frontCtx.lineWidth = 1;
+    backCtx.lineWidth = 0.5;
+    frontCtx.lineWidth = 0.5;
     for (let i = 0; i <= RINGS; i++) {
       for (let j = 0; j <= SEGS; j++) {
         if (j < SEGS) {
@@ -157,6 +221,7 @@
     // Coastlines on the shell — each point morphed/rotated/projected like a
     // vertex, then the polyline stroked segment by segment with the same
     // depth fade and front/back split as the wireframe.
+    const coastC = (window.THEME && window.THEME.coast) || DEF_COAST;
     for (const line of coast) {
       let hx = 0, hy = 0, hz = 0, has = false;
       for (let k = 0; k < line.length; k++) {
@@ -175,14 +240,31 @@
           const depth = (hz + z2) * 0.5;
           const a = 0.12 + 0.6 * (1 - (depth + R) / (2 * R));
           const c = depth < 0 ? frontCtx : backCtx;
-          c.strokeStyle = `rgba(${COAST[0]},${COAST[1]},${COAST[2]},${a.toFixed(3)})`;
+          c.strokeStyle = `rgba(${coastC[0] | 0},${coastC[1] | 0},${coastC[2] | 0},${a.toFixed(3)})`;
           c.beginPath();
           c.moveTo(hx, hy);
           c.lineTo(sx, sy);
           c.stroke();
+          if (c === frontCtx) whiteSeg(hx, hy, sx, sy);
         }
         hx = sx; hy = sy; hz = z2; has = true;
       }
+    }
+
+    // Keep only the white strands that fall on a glyph, then lay them over the
+    // stone front lines — so each near strand reads white where it crosses a
+    // letter, and stays stone everywhere else.
+    if (title) {
+      whiteCtx.save();
+      whiteCtx.setTransform(1, 0, 0, 1, 0, 0);
+      whiteCtx.globalCompositeOperation = "destination-in";
+      whiteCtx.drawImage(maskCanvas, 0, 0);
+      whiteCtx.restore();
+
+      frontCtx.save();
+      frontCtx.setTransform(1, 0, 0, 1, 0, 0);
+      frontCtx.drawImage(whiteBuf, 0, 0);
+      frontCtx.restore();
     }
 
     if (!reduce) requestAnimationFrame(frame);
