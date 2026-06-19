@@ -1,5 +1,103 @@
 {
-  "updated": null,
-  "recent": [],
-  "top": []
+  "updated": "2026-06-19T03:18:29.519Z",
+  "recent": [
+    {
+      "id": "7gvh80lWlcPBsbctsWoIBJ",
+      "name": "Dream police",
+      "artists": "Mk.gee",
+      "url": "https://open.spotify.com/track/7gvh80lWlcPBsbctsWoIBJ"
+    },
+    {
+      "id": "1fAaC0BVOACO5hmyiwIqAG",
+      "name": "Alesis",
+      "artists": "Mk.gee",
+      "url": "https://open.spotify.com/track/1fAaC0BVOACO5hmyiwIqAG"
+    },
+    {
+      "id": "63ABAnFKJCp28TAyqf2cGL",
+      "name": "ROCKMAN",
+      "artists": "Mk.gee",
+      "url": "https://open.spotify.com/track/63ABAnFKJCp28TAyqf2cGL"
+    },
+    {
+      "id": "5qcwzdhDQjHjmu12gOLjY0",
+      "name": "You",
+      "artists": "Mk.gee",
+      "url": "https://open.spotify.com/track/5qcwzdhDQjHjmu12gOLjY0"
+    },
+    {
+      "id": "3SlJfTjBeDwZVwRhfcUJel",
+      "name": "Unaware",
+      "artists": "Mk.gee",
+      "url": "https://open.spotify.com/track/3SlJfTjBeDwZVwRhfcUJel"
+    },
+    {
+      "id": "1ED6fIsQtKmFf83bMxDXKl",
+      "name": "How many miles",
+      "artists": "Mk.gee",
+      "url": "https://open.spotify.com/track/1ED6fIsQtKmFf83bMxDXKl"
+    },
+    {
+      "id": "0EqkXNPOl9qUXXvLyVDF20",
+      "name": "Come On (You Know That I'm A Fool)",
+      "artists": "Mk.gee",
+      "url": "https://open.spotify.com/track/0EqkXNPOl9qUXXvLyVDF20"
+    },
+    {
+      "id": "4xtUZ5fJoNpJg6FJ8B8kE3",
+      "name": "Nothingburger",
+      "artists": "Car Culture, Physical Therapy",
+      "url": "https://open.spotify.com/track/4xtUZ5fJoNpJg6FJ8B8kE3"
+    }
+  ],
+  "top": [
+    {
+      "id": "76amMtyRHVVa2mpIuclM9l",
+      "name": "Wholesale Anthem",
+      "artists": "Headache, Vegyn",
+      "url": "https://open.spotify.com/track/76amMtyRHVVa2mpIuclM9l"
+    },
+    {
+      "id": "3xHMMtjr6MCB5TwildjO2V",
+      "name": "Mindflower",
+      "artists": "Now Always Fades",
+      "url": "https://open.spotify.com/track/3xHMMtjr6MCB5TwildjO2V"
+    },
+    {
+      "id": "3kk2Dvffp73fZW3ZbFrInH",
+      "name": "Rest Here",
+      "artists": "Car Culture, Physical Therapy",
+      "url": "https://open.spotify.com/track/3kk2Dvffp73fZW3ZbFrInH"
+    },
+    {
+      "id": "2vHq8p1ECX8VwrAy5Ral34",
+      "name": "Chasing a Comfort",
+      "artists": "16 Underground",
+      "url": "https://open.spotify.com/track/2vHq8p1ECX8VwrAy5Ral34"
+    },
+    {
+      "id": "514joG57v4yKTsfQmz7stz",
+      "name": "Janice STFU",
+      "artists": "Drake",
+      "url": "https://open.spotify.com/track/514joG57v4yKTsfQmz7stz"
+    },
+    {
+      "id": "4xtUZ5fJoNpJg6FJ8B8kE3",
+      "name": "Nothingburger",
+      "artists": "Car Culture, Physical Therapy",
+      "url": "https://open.spotify.com/track/4xtUZ5fJoNpJg6FJ8B8kE3"
+    },
+    {
+      "id": "63gOTfEniAdF7IsVy6PSK4",
+      "name": "Manifester",
+      "artists": "Loukeman",
+      "url": "https://open.spotify.com/track/63gOTfEniAdF7IsVy6PSK4"
+    },
+    {
+      "id": "2BuBXn15gj4MNYZydyWgrk",
+      "name": "Come Back Baby",
+      "artists": "Pusha T",
+      "url": "https://open.spotify.com/track/2BuBXn15gj4MNYZydyWgrk"
+    }
+  ]
 }
