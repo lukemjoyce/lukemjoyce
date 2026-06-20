@@ -1,17 +1,23 @@
 {
-  "updated": "2026-06-19T23:05:44.455Z",
+  "updated": "2026-06-20T04:18:43.381Z",
   "recent": [
     {
-      "id": "62o1VaYRuqKQRJ2s64nY9l",
-      "name": "Won't U",
-      "artists": "Loukeman",
-      "url": "https://open.spotify.com/track/62o1VaYRuqKQRJ2s64nY9l"
+      "id": "6wdrRE2iafc53qkcuFzbia",
+      "name": "Impatience, Magma",
+      "artists": "Caterina Barbieri, Bendik Giske",
+      "url": "https://open.spotify.com/track/6wdrRE2iafc53qkcuFzbia"
     },
     {
-      "id": "2z0KIKHQvp3snXOVnEXwpp",
-      "name": "High speed calm air tonight",
-      "artists": "ML Buch",
-      "url": "https://open.spotify.com/track/2z0KIKHQvp3snXOVnEXwpp"
+      "id": "3AUP3FpNi8ORH8HyPZsq6f",
+      "name": "Elktorn",
+      "artists": "Loukeman",
+      "url": "https://open.spotify.com/track/3AUP3FpNi8ORH8HyPZsq6f"
+    },
+    {
+      "id": "1gMn0jk3wTRbiSA8NFNyMa",
+      "name": "Shadowww",
+      "artists": "Loukeman",
+      "url": "https://open.spotify.com/track/1gMn0jk3wTRbiSA8NFNyMa"
     },
     {
       "id": "1osOQXNTHtmz2oLzPwPQB6",
@@ -26,28 +32,22 @@
       "url": "https://open.spotify.com/track/7J3mkvdwNFxcLdGcAiK9GW"
     },
     {
-      "id": "1Ywt0ieG8EC4osUu1LkNzI",
-      "name": "LLTB",
-      "artists": "Jam City, Wet",
-      "url": "https://open.spotify.com/track/1Ywt0ieG8EC4osUu1LkNzI"
+      "id": "4xtUZ5fJoNpJg6FJ8B8kE3",
+      "name": "Nothingburger",
+      "artists": "Car Culture, Physical Therapy",
+      "url": "https://open.spotify.com/track/4xtUZ5fJoNpJg6FJ8B8kE3"
     },
     {
-      "id": "62o1VaYRuqKQRJ2s64nY9l",
-      "name": "Won't U",
-      "artists": "Loukeman",
-      "url": "https://open.spotify.com/track/62o1VaYRuqKQRJ2s64nY9l"
+      "id": "3SlJfTjBeDwZVwRhfcUJel",
+      "name": "Unaware",
+      "artists": "Mk.gee",
+      "url": "https://open.spotify.com/track/3SlJfTjBeDwZVwRhfcUJel"
     },
     {
-      "id": "2z0KIKHQvp3snXOVnEXwpp",
-      "name": "High speed calm air tonight",
-      "artists": "ML Buch",
-      "url": "https://open.spotify.com/track/2z0KIKHQvp3snXOVnEXwpp"
-    },
-    {
-      "id": "1osOQXNTHtmz2oLzPwPQB6",
-      "name": "Gorgeous Stuff",
-      "artists": "Loukeman",
-      "url": "https://open.spotify.com/track/1osOQXNTHtmz2oLzPwPQB6"
+      "id": "4LtgB8Rg2PJXqNuRs97rXl",
+      "name": "Sexy Boy - Vegyn Version",
+      "artists": "Vegyn, Air",
+      "url": "https://open.spotify.com/track/4LtgB8Rg2PJXqNuRs97rXl"
     }
   ],
   "top": [
@@ -88,16 +88,16 @@
       "url": "https://open.spotify.com/track/4xtUZ5fJoNpJg6FJ8B8kE3"
     },
     {
-      "id": "63gOTfEniAdF7IsVy6PSK4",
-      "name": "Manifester",
-      "artists": "Loukeman",
-      "url": "https://open.spotify.com/track/63gOTfEniAdF7IsVy6PSK4"
-    },
-    {
       "id": "1CGT5LV74SNzXFnVmTdAE8",
       "name": "A Dream Goes On Forever",
       "artists": "Vegyn, John Glacier",
       "url": "https://open.spotify.com/track/1CGT5LV74SNzXFnVmTdAE8"
+    },
+    {
+      "id": "2BuBXn15gj4MNYZydyWgrk",
+      "name": "Come Back Baby",
+      "artists": "Pusha T",
+      "url": "https://open.spotify.com/track/2BuBXn15gj4MNYZydyWgrk"
     }
   ]
 }
