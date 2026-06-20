@@ -1,6 +1,12 @@
 {
-  "updated": "2026-06-20T04:18:43.381Z",
+  "updated": "2026-06-20T08:25:20.171Z",
   "recent": [
+    {
+      "id": "1s1gephZljhEtwZbW8uAN8",
+      "name": "Halo Flip",
+      "artists": "Vegyn, Lauren Auder",
+      "url": "https://open.spotify.com/track/1s1gephZljhEtwZbW8uAN8"
+    },
     {
       "id": "6wdrRE2iafc53qkcuFzbia",
       "name": "Impatience, Magma",
@@ -42,12 +48,6 @@
       "name": "Unaware",
       "artists": "Mk.gee",
       "url": "https://open.spotify.com/track/3SlJfTjBeDwZVwRhfcUJel"
-    },
-    {
-      "id": "4LtgB8Rg2PJXqNuRs97rXl",
-      "name": "Sexy Boy - Vegyn Version",
-      "artists": "Vegyn, Air",
-      "url": "https://open.spotify.com/track/4LtgB8Rg2PJXqNuRs97rXl"
     }
   ],
   "top": [
@@ -76,28 +76,28 @@
       "url": "https://open.spotify.com/track/2vHq8p1ECX8VwrAy5Ral34"
     },
     {
-      "id": "514joG57v4yKTsfQmz7stz",
-      "name": "Janice STFU",
-      "artists": "Drake",
-      "url": "https://open.spotify.com/track/514joG57v4yKTsfQmz7stz"
-    },
-    {
       "id": "4xtUZ5fJoNpJg6FJ8B8kE3",
       "name": "Nothingburger",
       "artists": "Car Culture, Physical Therapy",
       "url": "https://open.spotify.com/track/4xtUZ5fJoNpJg6FJ8B8kE3"
     },
     {
-      "id": "1CGT5LV74SNzXFnVmTdAE8",
-      "name": "A Dream Goes On Forever",
-      "artists": "Vegyn, John Glacier",
-      "url": "https://open.spotify.com/track/1CGT5LV74SNzXFnVmTdAE8"
+      "id": "514joG57v4yKTsfQmz7stz",
+      "name": "Janice STFU",
+      "artists": "Drake",
+      "url": "https://open.spotify.com/track/514joG57v4yKTsfQmz7stz"
     },
     {
       "id": "2BuBXn15gj4MNYZydyWgrk",
       "name": "Come Back Baby",
       "artists": "Pusha T",
       "url": "https://open.spotify.com/track/2BuBXn15gj4MNYZydyWgrk"
+    },
+    {
+      "id": "63gOTfEniAdF7IsVy6PSK4",
+      "name": "Manifester",
+      "artists": "Loukeman",
+      "url": "https://open.spotify.com/track/63gOTfEniAdF7IsVy6PSK4"
     }
   ]
 }
