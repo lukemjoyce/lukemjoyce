@@ -22,44 +22,52 @@ document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") setMenu(false);
 });
 
-// Cross-page links: fade the white curtain in (page fades to white), then
-// navigate. The destination page fades the curtain back out on load, so the
-// two pages cross-fade through white. Same-page anchors and new-tab clicks are
-// left alone.
-const curtain = document.querySelector(".fade-curtain");
+// ── Spatial deck navigation ─────────────────────────
+// Home is the centre; the other panels live left / up / right / down around it
+// on one plane. go(name) slides the plane so the chosen panel fills the
+// viewport — the same seamless motion in every direction. Any element with a
+// data-go attribute (edge cues, back cues, menu links) drives it.
+const plane = document.getElementById("plane");
+const PANELS = ["home", "about", "projects", "experience", "music"];
+const OFFSET = {
+  home:       [0, 0],
+  about:      [100, 0],   // about is to the left  → slide the plane right
+  projects:   [0, 100],   // projects is up        → slide the plane down
+  experience: [-100, 0],  // experience is right   → slide the plane left
+  music:      [0, -100],  // music is down         → slide the plane up
+};
+const navLinks = document.querySelectorAll("[data-go]");
 
-function fadeOutThenGo(href) {
-  let done = false;
-  const go = () => {
-    if (done) return;
-    done = true;
-    location.href = href;
-  };
-  curtain.classList.add("leaving");
-  curtain.addEventListener("animationend", go, { once: true });
-  // fallback in case animationend doesn't fire (e.g. reduced motion)
-  const fade = parseFloat(getComputedStyle(curtain).animationDuration) * 1000 || 450;
-  setTimeout(go, fade + 100);
+function setActive(name) {
+  menu.querySelectorAll("a[data-go]").forEach((a) => {
+    if (a.dataset.go === name) a.setAttribute("aria-current", "page");
+    else a.removeAttribute("aria-current");
+  });
 }
 
-menu.querySelectorAll("a").forEach((link) => {
-  link.addEventListener("click", (e) => {
-    const url = new URL(link.href, location.href);
-    const sameDoc = url.pathname === location.pathname && url.search === location.search;
-    const newTab =
-      e.defaultPrevented ||
-      e.button !== 0 ||
-      e.metaKey ||
-      e.ctrlKey ||
-      e.shiftKey ||
-      e.altKey ||
-      link.target === "_blank";
+function go(name, animate = true) {
+  if (!plane || !OFFSET[name]) return;
+  if (!animate) plane.style.transition = "none";
+  const [x, y] = OFFSET[name];
+  plane.style.transform = `translate(${x}vw, ${y}vh)`;
+  if (!animate) {
+    void plane.offsetWidth; // flush the jump, then restore the sliding transition
+    plane.style.transition = "";
+  }
+  setActive(name);
+  history.replaceState(null, "", name === "home" ? location.pathname : "#" + name);
+}
 
-    setMenu(false);
-
-    if (sameDoc || newTab || !curtain) return; // anchor on this page, or new tab
-
+navLinks.forEach((el) => {
+  el.addEventListener("click", (e) => {
     e.preventDefault();
-    fadeOutThenGo(url.href);
+    setMenu(false);
+    go(el.dataset.go);
   });
 });
+
+// Honour an initial #panel deep-link on load, without animating in.
+if (plane) {
+  const start = (location.hash || "").replace("#", "");
+  go(PANELS.includes(start) ? start : "home", false);
+}

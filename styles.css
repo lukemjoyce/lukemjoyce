@@ -19,6 +19,10 @@ body {
   height: 100%;
 }
 
+html {
+  scroll-behavior: smooth; /* gentle glide when jumping to the music section */
+}
+
 body {
   background: var(--bg);
   color: var(--stone);
@@ -63,6 +67,31 @@ body {
 }
 .menu-toggle.open .bar:nth-child(3) {
   transform: translateY(-8.25px) rotate(-45deg);
+}
+
+/* ── Social links (top-right) ───────────────────── */
+.social {
+  position: fixed;
+  top: 28px;
+  right: 28px;
+  z-index: 9;            /* under the overlay, so it dims when the menu opens */
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  height: 18px;          /* match the hamburger so both sit on the same line */
+}
+.social a {
+  display: inline-flex;
+  color: var(--stone-soft);
+  transition: color 0.3s var(--ease);
+}
+.social a:hover {
+  color: var(--stone);
+}
+.social svg {
+  display: block;
+  width: 22px;
+  height: 22px;
 }
 
 /* ── Overlay ────────────────────────────────────── */
@@ -131,7 +160,8 @@ body {
   letter-spacing: 0.02em;
   transition: color 0.25s var(--ease);
 }
-.menu-list a:hover {
+.menu-list a:hover,
+.menu-list a[aria-current="page"] {
   color: var(--stone);
 }
 
@@ -145,7 +175,7 @@ body {
 /* ── Hero ───────────────────────────────────────── */
 .hero {
   position: relative;
-  height: 100%;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -154,11 +184,9 @@ body {
 
 .blob {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 89vmin;
-  height: 89vmin;
-  transform: translate(-50%, -50%);
+  inset: 0;
+  width: 100%;
+  height: 100%;
   pointer-events: none;
 }
 
@@ -180,6 +208,114 @@ body {
   user-select: none;          /* can't highlight/select the text */
   -webkit-user-select: none;  /* Safari */
   cursor: default;            /* keep the arrow cursor, not the text I-beam */
+}
+
+/* Edge cues — a labelled floating arrow on each edge of the hero, pointing the
+   way to another page (and the music section below). Same motif all round. */
+.edge-cue {
+  position: absolute;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--stone-soft);
+  text-decoration: none;
+  transition: color 0.25s var(--ease);
+}
+.edge-cue:hover {
+  color: var(--stone);
+}
+.edge-cue-label {
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* bottom edge — On Repeat */
+.edge-cue--down {
+  left: 50%;
+  bottom: 34px;
+  flex-direction: column;
+  animation: cue-down 2.4s var(--ease) infinite;
+}
+@keyframes cue-down {
+  0%, 100% { transform: translate(-50%, 0); opacity: 0.6; }
+  50%      { transform: translate(-50%, 7px); opacity: 1; }
+}
+
+/* top edge — Projects */
+.edge-cue--up {
+  left: 50%;
+  top: 34px;
+  flex-direction: column;
+  animation: cue-up 2.4s var(--ease) infinite;
+}
+@keyframes cue-up {
+  0%, 100% { transform: translate(-50%, 0); opacity: 0.6; }
+  50%      { transform: translate(-50%, -7px); opacity: 1; }
+}
+
+/* left edge — About */
+.edge-cue--left {
+  left: 28px;
+  top: 50%;
+  flex-direction: row;
+  animation: cue-left 2.4s var(--ease) infinite;
+}
+@keyframes cue-left {
+  0%, 100% { transform: translate(0, -50%); opacity: 0.6; }
+  50%      { transform: translate(-7px, -50%); opacity: 1; }
+}
+
+/* right edge — Experience */
+.edge-cue--right {
+  right: 28px;
+  top: 50%;
+  flex-direction: row;
+  animation: cue-right 2.4s var(--ease) infinite;
+}
+@keyframes cue-right {
+  0%, 100% { transform: translate(0, -50%); opacity: 0.6; }
+  50%      { transform: translate(7px, -50%); opacity: 1; }
+}
+
+/* ── Spatial deck (Prezi-style panels) ──────────── */
+/* Home sits at the centre; About / Projects / Experience / Music are panels
+   laid out left / up / right / down around it on one big plane. Navigating
+   slides the plane so the chosen panel fills the viewport — the same seamless
+   motion in every direction. */
+.deck {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  z-index: 0;
+}
+.plane {
+  position: absolute;
+  inset: 0;
+  transition: transform 0.85s var(--ease);
+  will-change: transform;
+}
+.panel {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+#home       { left: 0;      top: 0;      }
+#about      { left: -100vw; top: 0;      }
+#projects   { left: 0;      top: -100vh; }
+#experience { left: 100vw;  top: 0;      }
+#music      { left: 0;      top: 100vh;  }
+
+/* tall panels scroll inside themselves; the back cue (a sibling) stays pinned */
+.panel-scroll {
+  position: absolute;
+  inset: 0;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 /* ── Page cross-fade (through white) ────────────── */
@@ -321,6 +457,113 @@ body {
   }
 }
 
+/* ── Projects page ──────────────────────────────── */
+.proj-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.proj-item {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 24px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid var(--stone-line);
+}
+.proj-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+/* left rail: external links */
+.proj-links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-top: 0.35em;
+}
+.proj-links a {
+  color: var(--stone-soft);
+  text-decoration: none;
+  font-size: 0.82rem;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  transition: color 0.25s var(--ease);
+}
+.proj-links a:hover {
+  color: var(--stone);
+}
+
+.proj-name {
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: var(--stone);
+}
+
+.proj-tagline {
+  margin-top: 4px;
+  color: var(--stone-soft);
+  font-size: 0.95rem;
+  font-weight: 300;
+}
+
+.proj-desc {
+  margin-top: 12px;
+  color: var(--stone-soft);
+  font-size: 0.92rem;
+  font-weight: 300;
+  line-height: 1.7;
+}
+
+/* tech-stack chips — thin outlined tags in the muted palette */
+.proj-stack {
+  margin-top: 16px;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.proj-stack li {
+  border: 1px solid var(--stone-line);
+  border-radius: 999px;
+  padding: 3px 10px;
+  color: var(--stone-soft);
+  font-size: 0.72rem;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+@media (max-width: 560px) {
+  .proj-item {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  .proj-links {
+    flex-direction: row;
+    gap: 18px;
+    padding-top: 0;
+  }
+}
+
+/* ── About page ─────────────────────────────────── */
+.about-text {
+  max-width: 60ch;
+  color: var(--stone-soft);
+  font-size: 0.95rem;
+  font-weight: 300;
+  line-height: 1.85;
+}
+.about-text p + p {
+  margin-top: 1.4em;
+}
+.about-text strong {
+  color: var(--stone);
+  font-weight: 500;
+}
+
 /* ── Music page (Spotify widget) ────────────────── */
 .page-lead {
   color: var(--stone-soft);
@@ -350,83 +593,12 @@ body {
   list-style: none;
   display: flex;
   flex-direction: column;
-}
-
-.sp-track {
-  border-bottom: 1px solid var(--stone-line);
-}
-.sp-track:last-child {
-  border-bottom: none;
-}
-
-.sp-row {
-  display: grid;
-  grid-template-columns: 24px 1fr;
-  align-items: center;
-  gap: 12px;
-  padding: 12px 2px;
-}
-
-.sp-play {
-  width: 24px;
-  height: 24px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background: none;
-  border: 1px solid var(--stone-line);
-  border-radius: 50%;
-  color: var(--stone-soft);
-  font-size: 0.55rem;
-  line-height: 1;
-  padding-left: 1px; /* optically centre the play glyph */
-  cursor: pointer;
-  flex: none;
-  transition: color 0.25s var(--ease), border-color 0.25s var(--ease);
-}
-.sp-play:hover {
-  color: var(--stone);
-  border-color: var(--stone-soft);
-}
-.sp-track.open .sp-play {
-  color: var(--stone);
-  border-color: var(--stone);
-}
-
-.sp-meta {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-  min-width: 0;
-}
-.sp-name,
-.sp-artist {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.sp-name {
-  font-size: 0.9rem;
-  font-weight: 400;
-  color: var(--stone);
-}
-.sp-artist {
-  font-size: 0.78rem;
-  font-weight: 300;
-  color: var(--stone-soft);
+  gap: 10px;
 }
 
 .sp-embed {
-  overflow: hidden;
-  max-height: 0;
-  transition: max-height 0.4s var(--ease);
-}
-.sp-track.open .sp-embed {
-  max-height: 96px;
-  padding-bottom: 12px;
-}
-.sp-embed iframe {
   width: 100%;
+  height: 80px;
   border: 0;
   border-radius: 12px;
   display: block;
@@ -456,5 +628,8 @@ body {
   * {
     transition-duration: 0.001s !important;
     animation-duration: 0.001s !important;
+  }
+  html {
+    scroll-behavior: auto;
   }
 }

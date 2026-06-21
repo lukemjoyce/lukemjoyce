@@ -250,10 +250,27 @@
     const T = now * 0.001;
     ctx.clearRect(0, 0, W, H);
     for (const k of gears) drawGear(k, T);
-    if (!reduce) requestAnimationFrame(frame);
+    if (running) rafId = requestAnimationFrame(frame);
   }
 
   resize();
   window.addEventListener("resize", resize);
-  requestAnimationFrame(frame);
+
+  // Only spin while the gears are on screen — when the Experience panel is slid
+  // out of view (or scrolled past), pause the loop so it isn't burning frames.
+  let running = false, rafId = null;
+  function start() {
+    if (running || reduce) return;
+    running = true;
+    rafId = requestAnimationFrame(frame);
+  }
+  function stop() {
+    running = false;
+    if (rafId != null) { cancelAnimationFrame(rafId); rafId = null; }
+  }
+  frame(performance.now()); // one frame now, so it's never blank before the observer fires
+  new IntersectionObserver(
+    (entries) => { entries[0].isIntersecting ? start() : stop(); },
+    { threshold: 0.01 }
+  ).observe(canvas);
 })();

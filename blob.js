@@ -36,9 +36,10 @@
     ];
   }
   const RINGS = 18; // latitude divisions
-  const SEGS = 50; // longitude divisions
-  const AMP = 0.15; // how far the surface morphs
+  const SEGS = 36; // longitude divisions
+  const AMP = 0; // how far the surface morphs
   const TILT = -0.38; // fixed pitch so we see it from slightly above
+  const OBLIQUITY = (23.44 * Math.PI) / 180; // Earth's real axial tilt, drawn as an in-plane lean
 
   // Unit direction for every vertex on the sphere, precomputed once.
   const dirs = [];
@@ -81,6 +82,14 @@
   }
 
   let W = 0, H = 0, dpr = 1;
+  // Globe centre in canvas coords, computed by buildTextMask once the name is
+  // measured so we can sit the globe a single space to its left. Null until then.
+  let blobCX = null, blobCY = null;
+
+  // ── One place to move / size the whole [globe + name] unit ──
+  const SCALE    = 0.875;   // overall size of the globe + name together
+  const OFFSET_X = 0;   // move the pair right (+) / left (−), in px
+  const OFFSET_Y = -16;   // move the pair down (+) / up (−), in px
 
   // Redraw the title into the mask in opaque white, positioned exactly over
   // where the on-screen <h1> sits relative to the blob canvas.
@@ -88,14 +97,42 @@
     if (!title) return;
     maskCtx.setTransform(dpr, 0, 0, dpr, 0, 0);
     maskCtx.clearRect(0, 0, W, H);
-    const cr = frontCanvas.getBoundingClientRect();
-    const tr = title.getBoundingClientRect();
+
+    // Size the name first: clear our own override so we read the responsive
+    // clamp size, then scale that — SCALE grows the name while staying responsive.
+    title.style.fontSize = "";
+    const baseFont = parseFloat(getComputedStyle(title).fontSize);
+    title.style.fontSize = `${baseFont * SCALE}px`;
+
     const cs = getComputedStyle(title);
     maskCtx.fillStyle = "#fff";
     maskCtx.textAlign = "center";
     maskCtx.textBaseline = "alphabetic";
     maskCtx.font = `${cs.fontWeight} ${cs.fontSize} ${cs.fontFamily}`;
     try { maskCtx.letterSpacing = cs.letterSpacing; } catch (e) {}
+
+    // Lay the globe and name out as a centred pair — [globe][space][name] —
+    // where the gap is one real space character in the title's own font (the
+    // whitespace you'd type between two words). The maths is done in the canvas's
+    // own coordinates so the disc can never be clipped by the canvas edge: the
+    // globe is always placed entirely inside [0, W]. SCALE/OFFSET_X/OFFSET_Y move
+    // and size the whole pair from this one place.
+    const R = Math.min(W, H) * 0.202 * SCALE; // 2/3 of the original radius × SCALE
+    const diam = 2 * R * 1.05; // include the slight perspective bulge of the disc
+    const space = 36 * SCALE; // px gap between the globe and the name
+    title.style.transform = "none";
+    const t0 = title.getBoundingClientRect(); // name centred, before the nudge
+    const cr = frontCanvas.getBoundingClientRect();
+    const pairW = diam + space + t0.width;
+    const pairLeft = Math.max(4, (W - pairW) / 2) + OFFSET_X; // canvas-x of the globe's left edge
+    blobCX = pairLeft + diam / 2;
+    blobCY = t0.top - cr.top + t0.height / 2 + OFFSET_Y;
+    // Slide the name so its left edge sits one space to the right of the globe,
+    // and drop it by OFFSET_Y so it moves with the globe.
+    const shift = cr.left + pairLeft + diam + space - t0.left;
+    title.style.transform = `translate(${shift.toFixed(1)}px, ${OFFSET_Y}px)`;
+
+    const tr = title.getBoundingClientRect();
 
     const text = title.textContent;
     const x = tr.left + tr.width / 2 - cr.left;
@@ -149,15 +186,18 @@
     frontCtx.clearRect(0, 0, W, H);
     whiteCtx.clearRect(0, 0, W, H);
 
-    const cx = W / 2;
-    const cy = H / 2;
-    const R = Math.min(W, H) * 0.34; // world radius in px
+    const R = Math.min(W, H) * 0.202 * SCALE; // world radius in px — 2/3 of original × SCALE
+    // Globe centre comes from the pair layout in buildTextMask; fall back to the
+    // canvas centre until the title has been measured.
+    const cx = blobCX != null ? blobCX : W / 2;
+    const cy = blobCY != null ? blobCY : H / 2;
     const camDist = R * 3.2;
     const focal = R * 3.2;
 
     const yaw = t * 0.25;
     const cy_ = Math.cos(yaw), sy_ = Math.sin(yaw);
     const cx_ = Math.cos(TILT), sx_ = Math.sin(TILT);
+    const cob = Math.cos(OBLIQUITY), sob = Math.sin(OBLIQUITY); // in-plane axial lean
 
     // Project every vertex for this frame.
     const px = [], py = [], pz = [];
@@ -176,8 +216,9 @@
         let z2 = y * sx_ + z1 * cx_;
 
         const f = focal / (z2 + camDist);
-        px[i][j] = cx + x1 * f;
-        py[i][j] = cy + y1 * f * 0.80;
+        const ox = x1 * f, oy = y1 * f;
+        px[i][j] = cx + ox * cob - oy * sob;
+        py[i][j] = cy + ox * sob + oy * cob;
         pz[i][j] = z2; // larger = farther
       }
     }
@@ -201,8 +242,8 @@
       if (c === frontCtx) whiteSeg(ax, ay, bx, by); // mirror near strands for the knockout
     }
 
-    backCtx.lineWidth = 1;
-    frontCtx.lineWidth = 1;
+    backCtx.lineWidth = 0.5;
+    frontCtx.lineWidth = 0.5;
     for (let i = 0; i <= RINGS; i++) {
       for (let j = 0; j <= SEGS; j++) {
         if (j < SEGS) {
@@ -233,8 +274,9 @@
         const y1 = y * cx_ - z1 * sx_;
         const z2 = y * sx_ + z1 * cx_;
         const f = focal / (z2 + camDist);
-        const sx = cx + x1 * f;
-        const sy = cy + y1 * f * 0.8;
+        const ox = x1 * f, oy = y1 * f;
+        const sx = cx + ox * cob - oy * sob;
+        const sy = cy + ox * sob + oy * cob;
 
         if (has) {
           const depth = (hz + z2) * 0.5;
@@ -267,8 +309,25 @@
       frontCtx.restore();
     }
 
-    if (!reduce) requestAnimationFrame(frame);
+    if (running) rafId = requestAnimationFrame(frame);
   }
 
-  requestAnimationFrame(frame);
+  // Only run the globe's loop while the home panel is actually on screen. When
+  // the deck slides it away, pause entirely — so panels' animation loops never
+  // pile up on top of each other.
+  let running = false, rafId = null;
+  function start() {
+    if (running || reduce) return;
+    running = true;
+    rafId = requestAnimationFrame(frame);
+  }
+  function stop() {
+    running = false;
+    if (rafId != null) { cancelAnimationFrame(rafId); rafId = null; }
+  }
+  frame(performance.now()); // one frame now, so it's never blank before the observer fires
+  new IntersectionObserver(
+    (entries) => { entries[0].isIntersecting ? start() : stop(); },
+    { threshold: 0.01 }
+  ).observe(backCanvas);
 })();

@@ -1,7 +1,7 @@
 // Music page widget. Reads the static spotify.json (refreshed hourly by the
 // "Update Spotify" GitHub Action) and renders Recently Played + Top Tracks as
-// monochrome rows. Clicking a row's play button expands Spotify's official
-// embed inline, so the page stays on-brand until you actually want to listen.
+// Spotify's official inline embeds, so a single click on the player starts
+// playback — no custom play button in the way.
 (() => {
   const mount = document.getElementById("spotify");
   if (!mount) return;
@@ -11,52 +11,22 @@
       "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;",
     }[c]));
 
+  const MAX = 5; // tracks shown per column
+
   function trackRow(t) {
     return `
-      <li class="sp-track" data-id="${esc(t.id)}">
-        <div class="sp-row">
-          <button class="sp-play" aria-label="Play ${esc(t.name)}" aria-expanded="false">&#9654;</button>
-          <div class="sp-meta">
-            <span class="sp-name">${esc(t.name)}</span>
-            <span class="sp-artist">${esc(t.artists)}</span>
-          </div>
-        </div>
-        <div class="sp-embed"></div>
+      <li class="sp-track">
+        <iframe class="sp-embed" title="${esc(t.name)} — ${esc(t.artists)}"
+          src="https://open.spotify.com/embed/track/${encodeURIComponent(t.id)}?utm_source=generator"
+          height="80" loading="lazy" allow="autoplay; encrypted-media"></iframe>
       </li>`;
   }
 
   function column(title, tracks) {
     const body = tracks.length
-      ? `<ol class="sp-list">${tracks.map(trackRow).join("")}</ol>`
+      ? `<ol class="sp-list">${tracks.slice(0, MAX).map(trackRow).join("")}</ol>`
       : `<p class="sp-empty">Nothing here yet.</p>`;
     return `<div class="sp-col"><h2 class="sp-col-title">${title}</h2>${body}</div>`;
-  }
-
-  function closeRow(row) {
-    row.classList.remove("open");
-    row.querySelector(".sp-play").setAttribute("aria-expanded", "false");
-    row.querySelector(".sp-embed").innerHTML = ""; // stops playback + frees the iframe
-  }
-
-  function wire() {
-    mount.querySelectorAll(".sp-track").forEach((row) => {
-      const btn = row.querySelector(".sp-play");
-      const slot = row.querySelector(".sp-embed");
-      btn.addEventListener("click", () => {
-        if (row.classList.contains("open")) {
-          closeRow(row);
-          return;
-        }
-        // only one track open at a time
-        mount.querySelectorAll(".sp-track.open").forEach(closeRow);
-        // lazy-load the embed only on first play
-        slot.innerHTML =
-          `<iframe src="https://open.spotify.com/embed/track/${encodeURIComponent(row.dataset.id)}?utm_source=generator"` +
-          ` height="80" loading="lazy" allow="autoplay; encrypted-media"></iframe>`;
-        row.classList.add("open");
-        btn.setAttribute("aria-expanded", "true");
-      });
-    });
   }
 
   fetch("spotify.json", { cache: "no-cache" })
@@ -73,7 +43,6 @@
         (data.updated
           ? `<p class="sp-updated">Updated ${esc(new Date(data.updated).toLocaleString())}</p>`
           : "");
-      wire();
     })
     .catch(() => {
       mount.innerHTML = `<p class="sp-empty">Couldn't load tracks right now.</p>`;

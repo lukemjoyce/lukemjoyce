@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Experience — Luke M. Joyce</title>
-  <meta name="description" content="Luke M. Joyce — experience." />
+  <title>Projects — Luke M. Joyce</title>
+  <meta name="description" content="Luke M. Joyce — things I've built." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
@@ -36,8 +36,8 @@
     <ul class="menu-list">
       <li style="--i: 0"><a href="index.html" class="menu-name">Luke M. Joyce</a></li>
       <li style="--i: 1"><a href="about.html">About</a></li>
-      <li style="--i: 2"><a href="projects.html">Projects</a></li>
-      <li style="--i: 3"><a href="experience.html" aria-current="page">Experience</a></li>
+      <li style="--i: 2"><a href="projects.html" aria-current="page">Projects</a></li>
+      <li style="--i: 3"><a href="experience.html">Experience</a></li>
       <li style="--i: 4"><a href="index.html#music">Music</a></li>
     </ul>
   </nav>
@@ -45,36 +45,29 @@
   <div id="overlay" class="overlay" tabindex="-1"></div>
 
   <main class="page">
-    <h1 class="page-title">Professional Experience</h1>
+    <h1 class="page-title">Projects</h1>
 
-    <canvas id="gears" class="gears" aria-hidden="true"></canvas>
-
-    <ol class="xp-list">
-      <li class="xp-item">
-        <div class="xp-period">July 2021 - Present</div>
-        <div class="xp-body">
-          <h2 class="xp-role">Software Engineer</h2>
-          <div class="xp-org">Cotality</div>
-          <ul class="xp-points">
-            <li>
-              Architected and launched a customer-facing geospatial insurance platform end-to-end — empowering insurers to interrogate 150M+ property assets against live weather telemetry for near-real-time, portfolio-scale risk intelligence. Anchored by a patented data-modeling engine that defined the category where no blueprint existed.
-            </li>
-            <li>
-              Reimagined core infrastructure from first principles — slashing pipeline runtime 85%, infrastructure spend 75%, and report-generation costs north of 90% through precision optimization across the full stack.
-            </li>
-            <li>
-              Spearheaded the migration of legacy systems to a microservices architecture, shaped the technical hiring bar, and pioneered the team's embrace of agentic coding tools — engineering the guardrails and standards that keep AI-accelerated output reliable at scale.
-            </li>
-          </ul>
+    <ol class="proj-list">
+      <li class="proj-item">
+        <div class="proj-links">
+          <a href="https://hearth-ai.app" target="_blank" rel="noopener noreferrer">Live ↗</a>
+          <a href="https://github.com/lukemjoyce/meal-planner" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
         </div>
-      </li>
-      <li class="xp-item">
-        <div class="xp-period">Summer 2020</div>
-        <div class="xp-body">
-          <h2 class="xp-role">Software Engineer Intern</h2>
-          <div class="xp-org">Visa, Inc.</div>
-          <ul class="xp-points">
-            <p class="description">Internal Hackathon finalist — shipped amidst simultaneously onboarding a brand-new puppy and improvising through the surreal turbulence of a global pandemic.</p>
+        <div class="proj-body">
+          <h2 class="proj-name">Hearth</h2>
+          <div class="proj-tagline">AI-powered weekly meal planner</div>
+          <p class="proj-desc">
+            Hearth turns a few questions into a week of dinners and the grocery run to match. A guided questionnaire captures allergies, diet, tastes, effort and budget, then Claude generates a structured meal plan — using forced tool-use for clean JSON and prompt caching to keep it fast and cheap. From there it builds an AI recipe library and an auto-generated grocery list priced against your chosen store (e.g. King Soopers), budget-aware and kept in sync: change a preference and Hearth flags the now-stale plan or list and offers to regenerate. Accounts and saved plans sit behind NextAuth login.
+          </p>
+          <ul class="proj-stack">
+            <li>Next.js 16</li>
+            <li>React 19</li>
+            <li>TypeScript</li>
+            <li>Prisma</li>
+            <li>PostgreSQL</li>
+            <li>Tailwind CSS</li>
+            <li>shadcn/ui</li>
+            <li>Claude API</li>
           </ul>
         </div>
       </li>
@@ -82,6 +75,5 @@
   </main>
 
   <script src="script.js?v=16"></script>
-  <script src="gears.js?v=25"></script>
 </body>
 </html>
