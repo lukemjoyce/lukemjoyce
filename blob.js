@@ -242,8 +242,8 @@
       if (c === frontCtx) whiteSeg(ax, ay, bx, by); // mirror near strands for the knockout
     }
 
-    backCtx.lineWidth = 0.5;
-    frontCtx.lineWidth = 0.5;
+    backCtx.lineWidth = 0.7;
+    frontCtx.lineWidth = 0.7;
     for (let i = 0; i <= RINGS; i++) {
       for (let j = 0; j <= SEGS; j++) {
         if (j < SEGS) {
