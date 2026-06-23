@@ -1,6 +1,24 @@
 {
-  "updated": "2026-06-23T21:03:27.897Z",
+  "updated": "2026-06-23T23:13:19.319Z",
   "recent": [
+    {
+      "id": "7tvuLLroI0n6uYBWuFig5d",
+      "name": "Lateralus",
+      "artists": "TOOL",
+      "url": "https://open.spotify.com/track/7tvuLLroI0n6uYBWuFig5d"
+    },
+    {
+      "id": "6DyywdbmTzlmXBzG9ym7Rt",
+      "name": "Sober",
+      "artists": "TOOL",
+      "url": "https://open.spotify.com/track/6DyywdbmTzlmXBzG9ym7Rt"
+    },
+    {
+      "id": "2ccHZVZrQCd5jaMnwmNHUI",
+      "name": "Last Night I Dreamt I Was Alone",
+      "artists": "Vegyn",
+      "url": "https://open.spotify.com/track/2ccHZVZrQCd5jaMnwmNHUI"
+    },
     {
       "id": "2txjhK0BwtEE8mXZNrPQ89",
       "name": "6ix",
@@ -12,24 +30,6 @@
       "name": "Halo Flip",
       "artists": "Vegyn, Lauren Auder",
       "url": "https://open.spotify.com/track/1s1gephZljhEtwZbW8uAN8"
-    },
-    {
-      "id": "2pSvA8nCTZZaVMi8pap1kf",
-      "name": "Abandon",
-      "artists": "Laurel Halo, Bendik Giske, Lucy Railton, James Underwood",
-      "url": "https://open.spotify.com/track/2pSvA8nCTZZaVMi8pap1kf"
-    },
-    {
-      "id": "3AUP3FpNi8ORH8HyPZsq6f",
-      "name": "Elktorn",
-      "artists": "Loukeman",
-      "url": "https://open.spotify.com/track/3AUP3FpNi8ORH8HyPZsq6f"
-    },
-    {
-      "id": "1gMn0jk3wTRbiSA8NFNyMa",
-      "name": "Shadowww",
-      "artists": "Loukeman",
-      "url": "https://open.spotify.com/track/1gMn0jk3wTRbiSA8NFNyMa"
     }
   ],
   "top": [
@@ -58,10 +58,10 @@
       "url": "https://open.spotify.com/track/4xtUZ5fJoNpJg6FJ8B8kE3"
     },
     {
-      "id": "1gMn0jk3wTRbiSA8NFNyMa",
-      "name": "Shadowww",
+      "id": "2txjhK0BwtEE8mXZNrPQ89",
+      "name": "6ix",
       "artists": "Loukeman",
-      "url": "https://open.spotify.com/track/1gMn0jk3wTRbiSA8NFNyMa"
+      "url": "https://open.spotify.com/track/2txjhK0BwtEE8mXZNrPQ89"
     }
   ]
 }
