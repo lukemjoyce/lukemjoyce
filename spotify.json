@@ -1,6 +1,24 @@
 {
-  "updated": "2026-06-23T12:42:14.032Z",
+  "updated": "2026-06-23T15:56:37.217Z",
   "recent": [
+    {
+      "id": "6fHS0zmDdDKktklfaqojaF",
+      "name": "Unchained - 2015 Remaster",
+      "artists": "Van Halen",
+      "url": "https://open.spotify.com/track/6fHS0zmDdDKktklfaqojaF"
+    },
+    {
+      "id": "78lgmZwycJ3nzsdgmPPGNx",
+      "name": "Immigrant Song - Remaster",
+      "artists": "Led Zeppelin",
+      "url": "https://open.spotify.com/track/78lgmZwycJ3nzsdgmPPGNx"
+    },
+    {
+      "id": "6H3kDe7CGoWYBabAeVWGiD",
+      "name": "Gimme Shelter",
+      "artists": "The Rolling Stones",
+      "url": "https://open.spotify.com/track/6H3kDe7CGoWYBabAeVWGiD"
+    },
     {
       "id": "2PpNgmrS9mAyrkRAwn6YPq",
       "name": "Rainbow in the Dark",
@@ -8,28 +26,10 @@
       "url": "https://open.spotify.com/track/2PpNgmrS9mAyrkRAwn6YPq"
     },
     {
-      "id": "7LRMbd3LEoV5wZJvXT1Lwb",
-      "name": "T.N.T.",
-      "artists": "AC/DC",
-      "url": "https://open.spotify.com/track/7LRMbd3LEoV5wZJvXT1Lwb"
-    },
-    {
-      "id": "0LN5gIsS5tQSmRzQrHSaTR",
-      "name": "Eminence Front",
-      "artists": "The Who",
-      "url": "https://open.spotify.com/track/0LN5gIsS5tQSmRzQrHSaTR"
-    },
-    {
-      "id": "6wdrRE2iafc53qkcuFzbia",
-      "name": "Impatience, Magma",
-      "artists": "Caterina Barbieri, Bendik Giske",
-      "url": "https://open.spotify.com/track/6wdrRE2iafc53qkcuFzbia"
-    },
-    {
-      "id": "3AUP3FpNi8ORH8HyPZsq6f",
-      "name": "Elktorn",
-      "artists": "Loukeman",
-      "url": "https://open.spotify.com/track/3AUP3FpNi8ORH8HyPZsq6f"
+      "id": "5EWPGh7jbTNO2wakv8LjUI",
+      "name": "Free Bird",
+      "artists": "Lynyrd Skynyrd",
+      "url": "https://open.spotify.com/track/5EWPGh7jbTNO2wakv8LjUI"
     }
   ],
   "top": [
@@ -38,12 +38,6 @@
       "name": "Wholesale Anthem",
       "artists": "Headache, Vegyn",
       "url": "https://open.spotify.com/track/76amMtyRHVVa2mpIuclM9l"
-    },
-    {
-      "id": "3kk2Dvffp73fZW3ZbFrInH",
-      "name": "Rest Here",
-      "artists": "Car Culture, Physical Therapy",
-      "url": "https://open.spotify.com/track/3kk2Dvffp73fZW3ZbFrInH"
     },
     {
       "id": "2vHq8p1ECX8VwrAy5Ral34",
@@ -56,6 +50,12 @@
       "name": "Coping Mechanism",
       "artists": "Car Culture, Physical Therapy",
       "url": "https://open.spotify.com/track/7J3mkvdwNFxcLdGcAiK9GW"
+    },
+    {
+      "id": "3kk2Dvffp73fZW3ZbFrInH",
+      "name": "Rest Here",
+      "artists": "Car Culture, Physical Therapy",
+      "url": "https://open.spotify.com/track/3kk2Dvffp73fZW3ZbFrInH"
     },
     {
       "id": "4xtUZ5fJoNpJg6FJ8B8kE3",
