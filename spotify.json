@@ -1,6 +1,24 @@
 {
-  "updated": "2026-06-22T22:52:20.467Z",
+  "updated": "2026-06-23T00:15:42.576Z",
   "recent": [
+    {
+      "id": "1gMn0jk3wTRbiSA8NFNyMa",
+      "name": "Shadowww",
+      "artists": "Loukeman",
+      "url": "https://open.spotify.com/track/1gMn0jk3wTRbiSA8NFNyMa"
+    },
+    {
+      "id": "62o1VaYRuqKQRJ2s64nY9l",
+      "name": "Won't U",
+      "artists": "Loukeman",
+      "url": "https://open.spotify.com/track/62o1VaYRuqKQRJ2s64nY9l"
+    },
+    {
+      "id": "2z0KIKHQvp3snXOVnEXwpp",
+      "name": "High speed calm air tonight",
+      "artists": "ML Buch",
+      "url": "https://open.spotify.com/track/2z0KIKHQvp3snXOVnEXwpp"
+    },
     {
       "id": "1osOQXNTHtmz2oLzPwPQB6",
       "name": "Gorgeous Stuff",
@@ -12,24 +30,6 @@
       "name": "Coping Mechanism",
       "artists": "Car Culture, Physical Therapy",
       "url": "https://open.spotify.com/track/7J3mkvdwNFxcLdGcAiK9GW"
-    },
-    {
-      "id": "3rt36njbDLJGdvdySoH0uQ",
-      "name": "Makeshift Tourniquet",
-      "artists": "Vegyn",
-      "url": "https://open.spotify.com/track/3rt36njbDLJGdvdySoH0uQ"
-    },
-    {
-      "id": "13aWgBKCrT1pwI8cbcSEzD",
-      "name": "Sky Writing",
-      "artists": "Fade Evare",
-      "url": "https://open.spotify.com/track/13aWgBKCrT1pwI8cbcSEzD"
-    },
-    {
-      "id": "6UEavK4FwqZNqQU59DtA2E",
-      "name": "Killswitch Lullaby (Slowed + Reverb)",
-      "artists": "The Lonely Tree, Flawed Mangoes",
-      "url": "https://open.spotify.com/track/6UEavK4FwqZNqQU59DtA2E"
     }
   ],
   "top": [
@@ -52,16 +52,16 @@
       "url": "https://open.spotify.com/track/2vHq8p1ECX8VwrAy5Ral34"
     },
     {
-      "id": "4xtUZ5fJoNpJg6FJ8B8kE3",
-      "name": "Nothingburger",
-      "artists": "Car Culture, Physical Therapy",
-      "url": "https://open.spotify.com/track/4xtUZ5fJoNpJg6FJ8B8kE3"
-    },
-    {
       "id": "7J3mkvdwNFxcLdGcAiK9GW",
       "name": "Coping Mechanism",
       "artists": "Car Culture, Physical Therapy",
       "url": "https://open.spotify.com/track/7J3mkvdwNFxcLdGcAiK9GW"
+    },
+    {
+      "id": "4xtUZ5fJoNpJg6FJ8B8kE3",
+      "name": "Nothingburger",
+      "artists": "Car Culture, Physical Therapy",
+      "url": "https://open.spotify.com/track/4xtUZ5fJoNpJg6FJ8B8kE3"
     }
   ]
 }
