@@ -1,6 +1,12 @@
 {
-  "updated": "2026-06-26T12:17:50.907Z",
+  "updated": "2026-06-26T15:28:02.612Z",
   "recent": [
+    {
+      "id": "06UOL50QYtDR5l06ohu88m",
+      "name": "I Know There's Gonna Be (Good Times)",
+      "artists": "Jamie xx, Young Thug, Popcaan",
+      "url": "https://open.spotify.com/track/06UOL50QYtDR5l06ohu88m"
+    },
     {
       "id": "7lPgKA5mLFNmGPMdb07OlM",
       "name": "Loud Places",
@@ -24,12 +30,6 @@
       "name": "Sweet Emotion",
       "artists": "Aerosmith",
       "url": "https://open.spotify.com/track/73TxYZd0lBCVRrHawrAglA"
-    },
-    {
-      "id": "2PpNgmrS9mAyrkRAwn6YPq",
-      "name": "Rainbow in the Dark",
-      "artists": "Dio",
-      "url": "https://open.spotify.com/track/2PpNgmrS9mAyrkRAwn6YPq"
     }
   ],
   "top": [
@@ -46,22 +46,22 @@
       "url": "https://open.spotify.com/track/7J3mkvdwNFxcLdGcAiK9GW"
     },
     {
-      "id": "2vHq8p1ECX8VwrAy5Ral34",
-      "name": "Chasing a Comfort",
-      "artists": "16 Underground",
-      "url": "https://open.spotify.com/track/2vHq8p1ECX8VwrAy5Ral34"
-    },
-    {
       "id": "2txjhK0BwtEE8mXZNrPQ89",
       "name": "6ix",
       "artists": "Loukeman",
       "url": "https://open.spotify.com/track/2txjhK0BwtEE8mXZNrPQ89"
     },
     {
-      "id": "4xtUZ5fJoNpJg6FJ8B8kE3",
-      "name": "Nothingburger",
-      "artists": "Car Culture, Physical Therapy",
-      "url": "https://open.spotify.com/track/4xtUZ5fJoNpJg6FJ8B8kE3"
+      "id": "1gMn0jk3wTRbiSA8NFNyMa",
+      "name": "Shadowww",
+      "artists": "Loukeman",
+      "url": "https://open.spotify.com/track/1gMn0jk3wTRbiSA8NFNyMa"
+    },
+    {
+      "id": "2vHq8p1ECX8VwrAy5Ral34",
+      "name": "Chasing a Comfort",
+      "artists": "16 Underground",
+      "url": "https://open.spotify.com/track/2vHq8p1ECX8VwrAy5Ral34"
     }
   ]
 }
