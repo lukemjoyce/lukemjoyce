@@ -1,6 +1,24 @@
 {
-  "updated": "2026-07-05T15:18:58.530Z",
+  "updated": "2026-07-05T17:19:29.975Z",
   "recent": [
+    {
+      "id": "63ABAnFKJCp28TAyqf2cGL",
+      "name": "ROCKMAN",
+      "artists": "Mk.gee",
+      "url": "https://open.spotify.com/track/63ABAnFKJCp28TAyqf2cGL"
+    },
+    {
+      "id": "13aWgBKCrT1pwI8cbcSEzD",
+      "name": "Sky Writing",
+      "artists": "Fade Evare",
+      "url": "https://open.spotify.com/track/13aWgBKCrT1pwI8cbcSEzD"
+    },
+    {
+      "id": "2MKMdhHQeRujdPrEaZp8aa",
+      "name": "Mystery Boy - Vegyn Remix",
+      "artists": "Sassy 009, Vegyn",
+      "url": "https://open.spotify.com/track/2MKMdhHQeRujdPrEaZp8aa"
+    },
     {
       "id": "4LtgB8Rg2PJXqNuRs97rXl",
       "name": "Sexy Boy - Vegyn Version",
@@ -8,28 +26,10 @@
       "url": "https://open.spotify.com/track/4LtgB8Rg2PJXqNuRs97rXl"
     },
     {
-      "id": "63gOTfEniAdF7IsVy6PSK4",
-      "name": "Manifester",
-      "artists": "Loukeman",
-      "url": "https://open.spotify.com/track/63gOTfEniAdF7IsVy6PSK4"
-    },
-    {
-      "id": "3kk2Dvffp73fZW3ZbFrInH",
-      "name": "Rest Here",
-      "artists": "Car Culture, Physical Therapy",
-      "url": "https://open.spotify.com/track/3kk2Dvffp73fZW3ZbFrInH"
-    },
-    {
-      "id": "77J0xRqv8ZpgPLWaUKWQzv",
-      "name": "Turn Me Inside - Zero 7 Remix",
-      "artists": "Vegyn, Léa Sen, Zero 7",
-      "url": "https://open.spotify.com/track/77J0xRqv8ZpgPLWaUKWQzv"
-    },
-    {
-      "id": "72z7FgU5p0iJ6cXGtAZ0f3",
-      "name": "Swimming",
-      "artists": "Flawed Mangoes",
-      "url": "https://open.spotify.com/track/72z7FgU5p0iJ6cXGtAZ0f3"
+      "id": "4LtgB8Rg2PJXqNuRs97rXl",
+      "name": "Sexy Boy - Vegyn Version",
+      "artists": "Vegyn, Air",
+      "url": "https://open.spotify.com/track/4LtgB8Rg2PJXqNuRs97rXl"
     }
   ],
   "top": [
@@ -52,16 +52,16 @@
       "url": "https://open.spotify.com/track/1gMn0jk3wTRbiSA8NFNyMa"
     },
     {
+      "id": "13aWgBKCrT1pwI8cbcSEzD",
+      "name": "Sky Writing",
+      "artists": "Fade Evare",
+      "url": "https://open.spotify.com/track/13aWgBKCrT1pwI8cbcSEzD"
+    },
+    {
       "id": "3AUP3FpNi8ORH8HyPZsq6f",
       "name": "Elktorn",
       "artists": "Loukeman",
       "url": "https://open.spotify.com/track/3AUP3FpNi8ORH8HyPZsq6f"
-    },
-    {
-      "id": "2z0KIKHQvp3snXOVnEXwpp",
-      "name": "High speed calm air tonight",
-      "artists": "ML Buch",
-      "url": "https://open.spotify.com/track/2z0KIKHQvp3snXOVnEXwpp"
     }
   ]
 }
