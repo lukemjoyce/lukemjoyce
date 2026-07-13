@@ -1,6 +1,12 @@
 {
-  "updated": "2026-07-13T21:04:33.419Z",
+  "updated": "2026-07-13T23:01:30.856Z",
   "recent": [
+    {
+      "id": "2JqhEPBaV1pPRgrqlTmsNn",
+      "name": "Silent But For Joy",
+      "artists": "Colle",
+      "url": "https://open.spotify.com/track/2JqhEPBaV1pPRgrqlTmsNn"
+    },
     {
       "id": "0pfSaA2qNWcALep0tmg904",
       "name": "Beretta (De Los Cerros La Escuela)",
@@ -24,12 +30,6 @@
       "name": "Inside of Me",
       "artists": "Madonna",
       "url": "https://open.spotify.com/track/0u6SzAN3aBaI2v8d2GrFdG"
-    },
-    {
-      "id": "1EdTyAMhjS4qEwBWoBMOu6",
-      "name": "Idaho - Live at Palisade Studios",
-      "artists": "Slow Pulp",
-      "url": "https://open.spotify.com/track/1EdTyAMhjS4qEwBWoBMOu6"
     }
   ],
   "top": [
@@ -40,16 +40,16 @@
       "url": "https://open.spotify.com/track/7J3mkvdwNFxcLdGcAiK9GW"
     },
     {
-      "id": "2txjhK0BwtEE8mXZNrPQ89",
-      "name": "6ix",
-      "artists": "Loukeman",
-      "url": "https://open.spotify.com/track/2txjhK0BwtEE8mXZNrPQ89"
-    },
-    {
       "id": "1gMn0jk3wTRbiSA8NFNyMa",
       "name": "Shadowww",
       "artists": "Loukeman",
       "url": "https://open.spotify.com/track/1gMn0jk3wTRbiSA8NFNyMa"
+    },
+    {
+      "id": "2txjhK0BwtEE8mXZNrPQ89",
+      "name": "6ix",
+      "artists": "Loukeman",
+      "url": "https://open.spotify.com/track/2txjhK0BwtEE8mXZNrPQ89"
     },
     {
       "id": "13aWgBKCrT1pwI8cbcSEzD",
