@@ -1,6 +1,12 @@
 {
-  "updated": "2026-07-14T18:09:37.057Z",
+  "updated": "2026-07-14T20:18:06.252Z",
   "recent": [
+    {
+      "id": "0u6SzAN3aBaI2v8d2GrFdG",
+      "name": "Inside of Me",
+      "artists": "Madonna",
+      "url": "https://open.spotify.com/track/0u6SzAN3aBaI2v8d2GrFdG"
+    },
     {
       "id": "1EdTyAMhjS4qEwBWoBMOu6",
       "name": "Idaho - Live at Palisade Studios",
@@ -24,12 +30,6 @@
       "name": "Judah Weston \"On The Radar\" Freestyle - Pillow Talk",
       "artists": "On The Radar, Judah Weston, IsoKeys",
       "url": "https://open.spotify.com/track/7AAoRsmGQQQyU5sfBImJAy"
-    },
-    {
-      "id": "6kNcp1ZJPtDPbzJ6nuaKvx",
-      "name": "Better Man",
-      "artists": "Slow Pulp",
-      "url": "https://open.spotify.com/track/6kNcp1ZJPtDPbzJ6nuaKvx"
     }
   ],
   "top": [
@@ -46,12 +46,6 @@
       "url": "https://open.spotify.com/track/1gMn0jk3wTRbiSA8NFNyMa"
     },
     {
-      "id": "2txjhK0BwtEE8mXZNrPQ89",
-      "name": "6ix",
-      "artists": "Loukeman",
-      "url": "https://open.spotify.com/track/2txjhK0BwtEE8mXZNrPQ89"
-    },
-    {
       "id": "13aWgBKCrT1pwI8cbcSEzD",
       "name": "Sky Writing",
       "artists": "Fade Evare",
@@ -62,6 +56,12 @@
       "name": "High speed calm air tonight",
       "artists": "ML Buch",
       "url": "https://open.spotify.com/track/2z0KIKHQvp3snXOVnEXwpp"
+    },
+    {
+      "id": "44xxa923JrXY1C4Y9401DA",
+      "name": "RA TA DIA",
+      "artists": "Judah Weston, IsoKeys",
+      "url": "https://open.spotify.com/track/44xxa923JrXY1C4Y9401DA"
     }
   ]
 }
