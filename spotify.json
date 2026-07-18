@@ -1,6 +1,12 @@
 {
-  "updated": "2026-07-18T04:05:19.387Z",
+  "updated": "2026-07-18T07:02:34.729Z",
   "recent": [
+    {
+      "id": "46XOHK5QfCC83yg5SOGjZk",
+      "name": "Bottom",
+      "artists": "TOOL",
+      "url": "https://open.spotify.com/track/46XOHK5QfCC83yg5SOGjZk"
+    },
     {
       "id": "6KIS5YIZAyeiFNx1aE1OhY",
       "name": "Hang on to Your Love",
@@ -24,12 +30,6 @@
       "name": "Olson",
       "artists": "Boards of Canada",
       "url": "https://open.spotify.com/track/5DZ4M3yMat79ok25rZHuA9"
-    },
-    {
-      "id": "6wBHYoPsAqS88OwfjCvlaq",
-      "name": "By Your Side - Remastered",
-      "artists": "Sade",
-      "url": "https://open.spotify.com/track/6wBHYoPsAqS88OwfjCvlaq"
     }
   ],
   "top": [
