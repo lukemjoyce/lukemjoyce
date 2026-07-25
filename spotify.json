@@ -1,18 +1,6 @@
 {
-  "updated": "2026-07-25T17:07:33.694Z",
+  "updated": "2026-07-25T19:17:59.124Z",
   "recent": [
-    {
-      "id": "1myvZtXA9yRIfY7yk1WIOd",
-      "name": "Apollo’s Island",
-      "artists": "Ludwig Göransson",
-      "url": "https://open.spotify.com/track/1myvZtXA9yRIfY7yk1WIOd"
-    },
-    {
-      "id": "6i7olOxVWLxv9khPk8tvBO",
-      "name": "Sirens",
-      "artists": "Ludwig Göransson",
-      "url": "https://open.spotify.com/track/6i7olOxVWLxv9khPk8tvBO"
-    },
     {
       "id": "2MonWA4DOsW9AZvCiqtEtd",
       "name": "Hades",
@@ -26,10 +14,22 @@
       "url": "https://open.spotify.com/track/5mOIOK9DuZca5tAgtxLdd1"
     },
     {
-      "id": "1kHHqmE1e2JkKemPQvxLMw",
-      "name": "Zeus’s Law",
+      "id": "6i7olOxVWLxv9khPk8tvBO",
+      "name": "Sirens",
       "artists": "Ludwig Göransson",
-      "url": "https://open.spotify.com/track/1kHHqmE1e2JkKemPQvxLMw"
+      "url": "https://open.spotify.com/track/6i7olOxVWLxv9khPk8tvBO"
+    },
+    {
+      "id": "6yk1nPTG2ymfQAvD9Qncuc",
+      "name": "Chasing the Escaping Sun",
+      "artists": "Ludwig Göransson",
+      "url": "https://open.spotify.com/track/6yk1nPTG2ymfQAvD9Qncuc"
+    },
+    {
+      "id": "3U0TqkoltIE7KqkZRwZ0J4",
+      "name": "The Trial of the Bow / Vengeance",
+      "artists": "Ludwig Göransson",
+      "url": "https://open.spotify.com/track/3U0TqkoltIE7KqkZRwZ0J4"
     }
   ],
   "top": [
