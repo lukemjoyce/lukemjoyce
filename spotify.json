@@ -1,6 +1,12 @@
 {
-  "updated": "2026-07-25T03:23:38.649Z",
+  "updated": "2026-07-25T06:24:03.273Z",
   "recent": [
+    {
+      "id": "1myvZtXA9yRIfY7yk1WIOd",
+      "name": "Apollo’s Island",
+      "artists": "Ludwig Göransson",
+      "url": "https://open.spotify.com/track/1myvZtXA9yRIfY7yk1WIOd"
+    },
     {
       "id": "6i7olOxVWLxv9khPk8tvBO",
       "name": "Sirens",
@@ -24,12 +30,6 @@
       "name": "Zeus’s Law",
       "artists": "Ludwig Göransson",
       "url": "https://open.spotify.com/track/1kHHqmE1e2JkKemPQvxLMw"
-    },
-    {
-      "id": "071hBiyU6jAyAzISKqQCG8",
-      "name": "Laestrygonians",
-      "artists": "Ludwig Göransson",
-      "url": "https://open.spotify.com/track/071hBiyU6jAyAzISKqQCG8"
     }
   ],
   "top": [
