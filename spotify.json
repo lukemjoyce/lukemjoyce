@@ -1,18 +1,6 @@
 {
-  "updated": "2026-07-26T00:05:45.431Z",
+  "updated": "2026-07-26T04:31:30.753Z",
   "recent": [
-    {
-      "id": "0D8l86LXxKcgKAO17DfQsl",
-      "name": "Rosetta Stoned",
-      "artists": "TOOL",
-      "url": "https://open.spotify.com/track/0D8l86LXxKcgKAO17DfQsl"
-    },
-    {
-      "id": "2iL5ns7JhMGFSGpfQ3HQ6k",
-      "name": "Part Of Me",
-      "artists": "TOOL",
-      "url": "https://open.spotify.com/track/2iL5ns7JhMGFSGpfQ3HQ6k"
-    },
     {
       "id": "5q4L6JyoEY3VN5pOSbgjS8",
       "name": "Swamp Song",
@@ -20,16 +8,28 @@
       "url": "https://open.spotify.com/track/5q4L6JyoEY3VN5pOSbgjS8"
     },
     {
-      "id": "6bBfqZW47dwndIfYQcB0VR",
-      "name": "Prison Sex",
-      "artists": "TOOL",
-      "url": "https://open.spotify.com/track/6bBfqZW47dwndIfYQcB0VR"
-    },
-    {
       "id": "46XOHK5QfCC83yg5SOGjZk",
       "name": "Bottom",
       "artists": "TOOL",
       "url": "https://open.spotify.com/track/46XOHK5QfCC83yg5SOGjZk"
+    },
+    {
+      "id": "4Wvnm0J3Zz9cmMdEMMghGA",
+      "name": "Undertow",
+      "artists": "TOOL",
+      "url": "https://open.spotify.com/track/4Wvnm0J3Zz9cmMdEMMghGA"
+    },
+    {
+      "id": "1jAZSNN8hrClDfy8lCxKte",
+      "name": "Ænema",
+      "artists": "TOOL",
+      "url": "https://open.spotify.com/track/1jAZSNN8hrClDfy8lCxKte"
+    },
+    {
+      "id": "5q4L6JyoEY3VN5pOSbgjS8",
+      "name": "Swamp Song",
+      "artists": "TOOL",
+      "url": "https://open.spotify.com/track/5q4L6JyoEY3VN5pOSbgjS8"
     }
   ],
   "top": [
@@ -58,10 +58,10 @@
       "url": "https://open.spotify.com/track/4ohEI9gzIH5mSK6R6aUssT"
     },
     {
-      "id": "3yTkf0Pt0NjXmJd8RhYSht",
-      "name": "BIG BLUE",
-      "artists": "Zorrovian",
-      "url": "https://open.spotify.com/track/3yTkf0Pt0NjXmJd8RhYSht"
+      "id": "46XOHK5QfCC83yg5SOGjZk",
+      "name": "Bottom",
+      "artists": "TOOL",
+      "url": "https://open.spotify.com/track/46XOHK5QfCC83yg5SOGjZk"
     }
   ]
 }
