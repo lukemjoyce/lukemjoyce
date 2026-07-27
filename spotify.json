@@ -1,6 +1,12 @@
 {
-  "updated": "2026-07-27T17:48:11.997Z",
+  "updated": "2026-07-27T19:44:52.334Z",
   "recent": [
+    {
+      "id": "0tSCLW0JRHrA32W7ZplFb1",
+      "name": "Welcome Home Stranger",
+      "artists": "Ludwig Göransson",
+      "url": "https://open.spotify.com/track/0tSCLW0JRHrA32W7ZplFb1"
+    },
     {
       "id": "1myvZtXA9yRIfY7yk1WIOd",
       "name": "Apollo’s Island",
@@ -24,12 +30,6 @@
       "name": "Ordinary World",
       "artists": "Duran Duran",
       "url": "https://open.spotify.com/track/0wokCRaKD0zPNhMRXAgVsr"
-    },
-    {
-      "id": "2QhURnm7mQDxBb5jWkbDug",
-      "name": "Don't Panic",
-      "artists": "Coldplay",
-      "url": "https://open.spotify.com/track/2QhURnm7mQDxBb5jWkbDug"
     }
   ],
   "top": [
