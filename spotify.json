@@ -1,6 +1,24 @@
 {
-  "updated": "2026-07-27T04:42:04.510Z",
+  "updated": "2026-07-27T08:37:45.789Z",
   "recent": [
+    {
+      "id": "1myvZtXA9yRIfY7yk1WIOd",
+      "name": "Apollo’s Island",
+      "artists": "Ludwig Göransson",
+      "url": "https://open.spotify.com/track/1myvZtXA9yRIfY7yk1WIOd"
+    },
+    {
+      "id": "6i7olOxVWLxv9khPk8tvBO",
+      "name": "Sirens",
+      "artists": "Ludwig Göransson",
+      "url": "https://open.spotify.com/track/6i7olOxVWLxv9khPk8tvBO"
+    },
+    {
+      "id": "4wCmqSrbyCgxEXROQE6vtV",
+      "name": "Somebody That I Used To Know",
+      "artists": "Gotye, Kimbra",
+      "url": "https://open.spotify.com/track/4wCmqSrbyCgxEXROQE6vtV"
+    },
     {
       "id": "0wokCRaKD0zPNhMRXAgVsr",
       "name": "Ordinary World",
@@ -12,24 +30,6 @@
       "name": "Don't Panic",
       "artists": "Coldplay",
       "url": "https://open.spotify.com/track/2QhURnm7mQDxBb5jWkbDug"
-    },
-    {
-      "id": "1f2V8U1BiWaC9aJWmpOARe",
-      "name": "By the Way",
-      "artists": "Red Hot Chili Peppers",
-      "url": "https://open.spotify.com/track/1f2V8U1BiWaC9aJWmpOARe"
-    },
-    {
-      "id": "2nO1DYEg1X5GHi8SSuNJQj",
-      "name": "Wait for Me",
-      "artists": "Kings of Leon",
-      "url": "https://open.spotify.com/track/2nO1DYEg1X5GHi8SSuNJQj"
-    },
-    {
-      "id": "1WYrTfvKjQYaYfVziGG1ET",
-      "name": "Linger - Remastered 2026",
-      "artists": "The Cranberries",
-      "url": "https://open.spotify.com/track/1WYrTfvKjQYaYfVziGG1ET"
     }
   ],
   "top": [
