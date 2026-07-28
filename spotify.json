@@ -1,6 +1,24 @@
 {
-  "updated": "2026-07-27T23:10:56.193Z",
+  "updated": "2026-07-28T03:17:28.291Z",
   "recent": [
+    {
+      "id": "2HLYtqXktRhjmgttwLs0W3",
+      "name": "Absolute Zero",
+      "artists": "Hoover",
+      "url": "https://open.spotify.com/track/2HLYtqXktRhjmgttwLs0W3"
+    },
+    {
+      "id": "3d9DChrdc6BOeFsbrZ3Is0",
+      "name": "Under the Bridge",
+      "artists": "Red Hot Chili Peppers",
+      "url": "https://open.spotify.com/track/3d9DChrdc6BOeFsbrZ3Is0"
+    },
+    {
+      "id": "1VL3A53tUQnR0elnbNth5K",
+      "name": "April Suzanne",
+      "artists": "Robert Lester Folsom",
+      "url": "https://open.spotify.com/track/1VL3A53tUQnR0elnbNth5K"
+    },
     {
       "id": "5DZ4M3yMat79ok25rZHuA9",
       "name": "Olson",
@@ -12,24 +30,6 @@
       "name": "Welcome Home Stranger",
       "artists": "Ludwig Göransson",
       "url": "https://open.spotify.com/track/0tSCLW0JRHrA32W7ZplFb1"
-    },
-    {
-      "id": "0tSCLW0JRHrA32W7ZplFb1",
-      "name": "Welcome Home Stranger",
-      "artists": "Ludwig Göransson",
-      "url": "https://open.spotify.com/track/0tSCLW0JRHrA32W7ZplFb1"
-    },
-    {
-      "id": "1myvZtXA9yRIfY7yk1WIOd",
-      "name": "Apollo’s Island",
-      "artists": "Ludwig Göransson",
-      "url": "https://open.spotify.com/track/1myvZtXA9yRIfY7yk1WIOd"
-    },
-    {
-      "id": "6i7olOxVWLxv9khPk8tvBO",
-      "name": "Sirens",
-      "artists": "Ludwig Göransson",
-      "url": "https://open.spotify.com/track/6i7olOxVWLxv9khPk8tvBO"
     }
   ],
   "top": [
