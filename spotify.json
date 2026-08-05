@@ -1,6 +1,24 @@
 {
-  "updated": "2026-08-05T19:44:38.560Z",
+  "updated": "2026-08-05T21:18:37.333Z",
   "recent": [
+    {
+      "id": "3kKPZFQse4LtbnMRhnAlEO",
+      "name": "doom",
+      "artists": "Steve Lacy",
+      "url": "https://open.spotify.com/track/3kKPZFQse4LtbnMRhnAlEO"
+    },
+    {
+      "id": "29Ivui73IiYKv8fghtyYpm",
+      "name": "Teenage Birdsong",
+      "artists": "Four Tet",
+      "url": "https://open.spotify.com/track/29Ivui73IiYKv8fghtyYpm"
+    },
+    {
+      "id": "2txjhK0BwtEE8mXZNrPQ89",
+      "name": "6ix",
+      "artists": "Loukeman",
+      "url": "https://open.spotify.com/track/2txjhK0BwtEE8mXZNrPQ89"
+    },
     {
       "id": "1OWBh1eVxUdA1Z6UA8r4nh",
       "name": "the feeling",
@@ -12,24 +30,6 @@
       "name": "6ix",
       "artists": "Loukeman",
       "url": "https://open.spotify.com/track/2txjhK0BwtEE8mXZNrPQ89"
-    },
-    {
-      "id": "5yDHgR0zM1hmjKzj34u2qM",
-      "name": "To The Sky",
-      "artists": "Loukeman",
-      "url": "https://open.spotify.com/track/5yDHgR0zM1hmjKzj34u2qM"
-    },
-    {
-      "id": "4xtUZ5fJoNpJg6FJ8B8kE3",
-      "name": "Nothingburger",
-      "artists": "Car Culture, Physical Therapy",
-      "url": "https://open.spotify.com/track/4xtUZ5fJoNpJg6FJ8B8kE3"
-    },
-    {
-      "id": "1CGT5LV74SNzXFnVmTdAE8",
-      "name": "A Dream Goes On Forever",
-      "artists": "Vegyn, John Glacier",
-      "url": "https://open.spotify.com/track/1CGT5LV74SNzXFnVmTdAE8"
     }
   ],
   "top": [
