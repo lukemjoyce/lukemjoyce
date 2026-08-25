@@ -1,6 +1,12 @@
 {
-  "updated": "2026-08-25T01:40:11.272Z",
+  "updated": "2026-08-25T03:05:24.961Z",
   "recent": [
+    {
+      "id": "40OVArVPa6nZ4VCtHQycuM",
+      "name": "195",
+      "artists": "KAYTRANADA",
+      "url": "https://open.spotify.com/track/40OVArVPa6nZ4VCtHQycuM"
+    },
     {
       "id": "42NbsmivX4RD8nvBLcNGu5",
       "name": "Still Beating",
@@ -24,12 +30,6 @@
       "name": "Power Glove",
       "artists": "Knife Party",
       "url": "https://open.spotify.com/track/6qpaTfe6rCl55xEPT4F7Hp"
-    },
-    {
-      "id": "263aNAQCeFSWipk896byo6",
-      "name": "Friday I'm in Love",
-      "artists": "The Cure",
-      "url": "https://open.spotify.com/track/263aNAQCeFSWipk896byo6"
     }
   ],
   "top": [
