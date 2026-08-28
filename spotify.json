@@ -1,44 +1,38 @@
 {
-  "updated": "2026-08-27T19:45:31.233Z",
+  "updated": "2026-08-28T04:09:29.452Z",
   "recent": [
     {
-      "id": "1fAaC0BVOACO5hmyiwIqAG",
-      "name": "Alesis",
-      "artists": "Mk.gee",
-      "url": "https://open.spotify.com/track/1fAaC0BVOACO5hmyiwIqAG"
+      "id": "4D1YzHNXLlBLlLlatzlyj0",
+      "name": "Hold On - Sub Focus Remix",
+      "artists": "Rusko, Amber Coffman, Sub Focus",
+      "url": "https://open.spotify.com/track/4D1YzHNXLlBLlLlatzlyj0"
     },
     {
-      "id": "5pLt5DvklGlNFDm2TmZ9Gz",
-      "name": "From the moon",
-      "artists": "Detente",
-      "url": "https://open.spotify.com/track/5pLt5DvklGlNFDm2TmZ9Gz"
+      "id": "6QqBigxOjJfpZjXpPeUxPR",
+      "name": "Transmutation",
+      "artists": "Chmura, Daggz",
+      "url": "https://open.spotify.com/track/6QqBigxOjJfpZjXpPeUxPR"
     },
     {
-      "id": "7IhiFqtPKncCJHF721tp8J",
-      "name": "Snoopy",
-      "artists": "Loukeman",
-      "url": "https://open.spotify.com/track/7IhiFqtPKncCJHF721tp8J"
+      "id": "7xVpkVkd1klTzLJEysIR7z",
+      "name": "Masters of War",
+      "artists": "Bob Dylan",
+      "url": "https://open.spotify.com/track/7xVpkVkd1klTzLJEysIR7z"
     },
     {
-      "id": "5njx7aiScVMfj1jmVgClHf",
-      "name": "The Pavement is my Pillow Talk",
-      "artists": "Headache",
-      "url": "https://open.spotify.com/track/5njx7aiScVMfj1jmVgClHf"
+      "id": "7xVpkVkd1klTzLJEysIR7z",
+      "name": "Masters of War",
+      "artists": "Bob Dylan",
+      "url": "https://open.spotify.com/track/7xVpkVkd1klTzLJEysIR7z"
     },
     {
-      "id": "64tgANMtVxmUzIYfuZSZrx",
-      "name": ">;0 (feat. Vegyn)",
-      "artists": "Mk.gee, Vegyn",
-      "url": "https://open.spotify.com/track/64tgANMtVxmUzIYfuZSZrx"
+      "id": "6F42bG2EsAgo2ShVbBCdt6",
+      "name": "Hey Tonight",
+      "artists": "Creedence Clearwater Revival",
+      "url": "https://open.spotify.com/track/6F42bG2EsAgo2ShVbBCdt6"
     }
   ],
   "top": [
-    {
-      "id": "714P7sk3F4zrETNUPNIL35",
-      "name": "Trust",
-      "artists": "Vegyn, Matt Maltese",
-      "url": "https://open.spotify.com/track/714P7sk3F4zrETNUPNIL35"
-    },
     {
       "id": "7jDxY5BblYMlamymg6jqfA",
       "name": "La femme d'argent - Vegyn Version",
@@ -46,10 +40,10 @@
       "url": "https://open.spotify.com/track/7jDxY5BblYMlamymg6jqfA"
     },
     {
-      "id": "22NHkFYbgxB2Zirj29Gbp8",
-      "name": "oh yeah?",
-      "artists": "Steve Lacy",
-      "url": "https://open.spotify.com/track/22NHkFYbgxB2Zirj29Gbp8"
+      "id": "714P7sk3F4zrETNUPNIL35",
+      "name": "Trust",
+      "artists": "Vegyn, Matt Maltese",
+      "url": "https://open.spotify.com/track/714P7sk3F4zrETNUPNIL35"
     },
     {
       "id": "5TH7kcmgdMUDpUiinmZbDl",
@@ -58,10 +52,16 @@
       "url": "https://open.spotify.com/track/5TH7kcmgdMUDpUiinmZbDl"
     },
     {
-      "id": "1CGT5LV74SNzXFnVmTdAE8",
-      "name": "A Dream Goes On Forever",
-      "artists": "Vegyn, John Glacier",
-      "url": "https://open.spotify.com/track/1CGT5LV74SNzXFnVmTdAE8"
+      "id": "22NHkFYbgxB2Zirj29Gbp8",
+      "name": "oh yeah?",
+      "artists": "Steve Lacy",
+      "url": "https://open.spotify.com/track/22NHkFYbgxB2Zirj29Gbp8"
+    },
+    {
+      "id": "3kKPZFQse4LtbnMRhnAlEO",
+      "name": "doom",
+      "artists": "Steve Lacy",
+      "url": "https://open.spotify.com/track/3kKPZFQse4LtbnMRhnAlEO"
     }
   ]
 }
