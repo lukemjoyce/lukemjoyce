@@ -1,11 +1,17 @@
 {
-  "updated": "2026-08-28T17:16:48.294Z",
+  "updated": "2026-08-29T01:39:28.860Z",
   "recent": [
     {
-      "id": "113dqP5ioyBKkNW4GRupep",
-      "name": "Light the Way",
+      "id": "1f4GNncAgVf7yVUdBNrnYN",
+      "name": "Remember to Cry",
       "artists": "Billy Strings",
-      "url": "https://open.spotify.com/track/113dqP5ioyBKkNW4GRupep"
+      "url": "https://open.spotify.com/track/1f4GNncAgVf7yVUdBNrnYN"
+    },
+    {
+      "id": "5hNPAsdz5MpN9WD5hbmrh5",
+      "name": "I Wish I Wanted To",
+      "artists": "Billy Strings",
+      "url": "https://open.spotify.com/track/5hNPAsdz5MpN9WD5hbmrh5"
     },
     {
       "id": "3OcsrSKSbAiS42wzy4yrxY",
@@ -14,22 +20,16 @@
       "url": "https://open.spotify.com/track/3OcsrSKSbAiS42wzy4yrxY"
     },
     {
+      "id": "2ZrQ69bP6qenxfqaLcLQMe",
+      "name": "10,000 Miles From a Friend",
+      "artists": "Billy Strings",
+      "url": "https://open.spotify.com/track/2ZrQ69bP6qenxfqaLcLQMe"
+    },
+    {
       "id": "2FHrK08KZC1k80Oqa1DadY",
       "name": "I Like Train Songs",
       "artists": "Billy Strings",
       "url": "https://open.spotify.com/track/2FHrK08KZC1k80Oqa1DadY"
-    },
-    {
-      "id": "113dqP5ioyBKkNW4GRupep",
-      "name": "Light the Way",
-      "artists": "Billy Strings",
-      "url": "https://open.spotify.com/track/113dqP5ioyBKkNW4GRupep"
-    },
-    {
-      "id": "2d1CBxKh6hIQqH1ns7L9si",
-      "name": "Bluewater Breakdown",
-      "artists": "Billy Strings",
-      "url": "https://open.spotify.com/track/2d1CBxKh6hIQqH1ns7L9si"
     }
   ],
   "top": [
@@ -52,16 +52,16 @@
       "url": "https://open.spotify.com/track/5TH7kcmgdMUDpUiinmZbDl"
     },
     {
-      "id": "22NHkFYbgxB2Zirj29Gbp8",
-      "name": "oh yeah?",
-      "artists": "Steve Lacy",
-      "url": "https://open.spotify.com/track/22NHkFYbgxB2Zirj29Gbp8"
-    },
-    {
       "id": "3kKPZFQse4LtbnMRhnAlEO",
       "name": "doom",
       "artists": "Steve Lacy",
       "url": "https://open.spotify.com/track/3kKPZFQse4LtbnMRhnAlEO"
+    },
+    {
+      "id": "22NHkFYbgxB2Zirj29Gbp8",
+      "name": "oh yeah?",
+      "artists": "Steve Lacy",
+      "url": "https://open.spotify.com/track/22NHkFYbgxB2Zirj29Gbp8"
     }
   ]
 }
