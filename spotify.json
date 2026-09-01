@@ -1,6 +1,18 @@
 {
-  "updated": "2026-09-01T09:53:09.479Z",
+  "updated": "2026-09-01T14:40:53.207Z",
   "recent": [
+    {
+      "id": "3mwvKOyMmG77zZRunnxp9E",
+      "name": "Buddy Holly",
+      "artists": "Weezer",
+      "url": "https://open.spotify.com/track/3mwvKOyMmG77zZRunnxp9E"
+    },
+    {
+      "id": "6VoIBz0VhCyz7OdEoRYDiA",
+      "name": "Say It Ain't So - Original Mix",
+      "artists": "Weezer",
+      "url": "https://open.spotify.com/track/6VoIBz0VhCyz7OdEoRYDiA"
+    },
     {
       "id": "5f6nwe1u8F6tWIlZuA1o9J",
       "name": "Lucid Daydream",
@@ -18,18 +30,6 @@
       "name": "Carry Us Home",
       "artists": "Billy Strings",
       "url": "https://open.spotify.com/track/6bOvkth6LOFrJbywr4JQJt"
-    },
-    {
-      "id": "5v0bNyyBlH1G95BIh6xt6P",
-      "name": "Burn the Other End",
-      "artists": "Billy Strings",
-      "url": "https://open.spotify.com/track/5v0bNyyBlH1G95BIh6xt6P"
-    },
-    {
-      "id": "0C80GCp0mMuBzLf3EAXqxv",
-      "name": "Shoot to Thrill",
-      "artists": "AC/DC",
-      "url": "https://open.spotify.com/track/0C80GCp0mMuBzLf3EAXqxv"
     }
   ],
   "top": [
