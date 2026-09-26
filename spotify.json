@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-26T20:56:13.132Z",
+  "updated": "2026-09-26T23:29:35.048Z",
   "recent": [
     {
       "id": "0jmKzJmUEKNbC7eU8YfOiA",
@@ -8,28 +8,28 @@
       "url": "https://open.spotify.com/track/0jmKzJmUEKNbC7eU8YfOiA"
     },
     {
-      "id": "7Jh4ySrytQOaDPF4XVUnv1",
-      "name": "Geek U.S.A. - 2011 Remaster",
+      "id": "0jmKzJmUEKNbC7eU8YfOiA",
+      "name": "Mayonaise - 2011 Remaster",
       "artists": "The Smashing Pumpkins",
-      "url": "https://open.spotify.com/track/7Jh4ySrytQOaDPF4XVUnv1"
+      "url": "https://open.spotify.com/track/0jmKzJmUEKNbC7eU8YfOiA"
     },
     {
-      "id": "6YIggUJW3ttAAPRdnki8RM",
-      "name": "Disarm - 2011 Remaster",
+      "id": "0u5aO1GYsIhAWCPuXdwnak",
+      "name": "Today - 2011 Remaster",
       "artists": "The Smashing Pumpkins",
-      "url": "https://open.spotify.com/track/6YIggUJW3ttAAPRdnki8RM"
-    },
-    {
-      "id": "59d0TRQ1IlsRQfBEtGmj5N",
-      "name": "Rocket - 2011 Remaster",
-      "artists": "The Smashing Pumpkins",
-      "url": "https://open.spotify.com/track/59d0TRQ1IlsRQfBEtGmj5N"
+      "url": "https://open.spotify.com/track/0u5aO1GYsIhAWCPuXdwnak"
     },
     {
       "id": "6tULAjasyLTeJecwhcIHCo",
       "name": "Hummer - 2011 Remaster",
       "artists": "The Smashing Pumpkins",
       "url": "https://open.spotify.com/track/6tULAjasyLTeJecwhcIHCo"
+    },
+    {
+      "id": "3ow0TQVttXQF8rLckmXgRx",
+      "name": "Cherub Rock - 2011 Remaster",
+      "artists": "The Smashing Pumpkins",
+      "url": "https://open.spotify.com/track/3ow0TQVttXQF8rLckmXgRx"
     }
   ],
   "top": [
@@ -52,16 +52,16 @@
       "url": "https://open.spotify.com/track/7jDxY5BblYMlamymg6jqfA"
     },
     {
+      "id": "3ow0TQVttXQF8rLckmXgRx",
+      "name": "Cherub Rock - 2011 Remaster",
+      "artists": "The Smashing Pumpkins",
+      "url": "https://open.spotify.com/track/3ow0TQVttXQF8rLckmXgRx"
+    },
+    {
       "id": "0GRBFjza23Im7Xb16c9AaK",
       "name": "No Quarter - Remaster",
       "artists": "Led Zeppelin",
       "url": "https://open.spotify.com/track/0GRBFjza23Im7Xb16c9AaK"
-    },
-    {
-      "id": "0u5aO1GYsIhAWCPuXdwnak",
-      "name": "Today - 2011 Remaster",
-      "artists": "The Smashing Pumpkins",
-      "url": "https://open.spotify.com/track/0u5aO1GYsIhAWCPuXdwnak"
     }
   ]
 }
