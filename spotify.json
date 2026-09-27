@@ -1,24 +1,6 @@
 {
-  "updated": "2026-09-26T23:29:35.048Z",
+  "updated": "2026-09-27T04:55:57.240Z",
   "recent": [
-    {
-      "id": "0jmKzJmUEKNbC7eU8YfOiA",
-      "name": "Mayonaise - 2011 Remaster",
-      "artists": "The Smashing Pumpkins",
-      "url": "https://open.spotify.com/track/0jmKzJmUEKNbC7eU8YfOiA"
-    },
-    {
-      "id": "0jmKzJmUEKNbC7eU8YfOiA",
-      "name": "Mayonaise - 2011 Remaster",
-      "artists": "The Smashing Pumpkins",
-      "url": "https://open.spotify.com/track/0jmKzJmUEKNbC7eU8YfOiA"
-    },
-    {
-      "id": "0u5aO1GYsIhAWCPuXdwnak",
-      "name": "Today - 2011 Remaster",
-      "artists": "The Smashing Pumpkins",
-      "url": "https://open.spotify.com/track/0u5aO1GYsIhAWCPuXdwnak"
-    },
     {
       "id": "6tULAjasyLTeJecwhcIHCo",
       "name": "Hummer - 2011 Remaster",
@@ -26,10 +8,28 @@
       "url": "https://open.spotify.com/track/6tULAjasyLTeJecwhcIHCo"
     },
     {
-      "id": "3ow0TQVttXQF8rLckmXgRx",
-      "name": "Cherub Rock - 2011 Remaster",
+      "id": "1nqvLU0W004vagJWgpMXjd",
+      "name": "2006",
+      "artists": "Detente",
+      "url": "https://open.spotify.com/track/1nqvLU0W004vagJWgpMXjd"
+    },
+    {
+      "id": "1YM2yozE7s0DjyKfcRzCB0",
+      "name": "A Perfect Day",
+      "artists": "Patch +",
+      "url": "https://open.spotify.com/track/1YM2yozE7s0DjyKfcRzCB0"
+    },
+    {
+      "id": "0jmKzJmUEKNbC7eU8YfOiA",
+      "name": "Mayonaise - 2011 Remaster",
       "artists": "The Smashing Pumpkins",
-      "url": "https://open.spotify.com/track/3ow0TQVttXQF8rLckmXgRx"
+      "url": "https://open.spotify.com/track/0jmKzJmUEKNbC7eU8YfOiA"
+    },
+    {
+      "id": "0jmKzJmUEKNbC7eU8YfOiA",
+      "name": "Mayonaise - 2011 Remaster",
+      "artists": "The Smashing Pumpkins",
+      "url": "https://open.spotify.com/track/0jmKzJmUEKNbC7eU8YfOiA"
     }
   ],
   "top": [
@@ -46,16 +46,16 @@
       "url": "https://open.spotify.com/track/5OW6HV3BZ7rK3TfknsHo0E"
     },
     {
-      "id": "7jDxY5BblYMlamymg6jqfA",
-      "name": "La femme d'argent - Vegyn Version",
-      "artists": "Vegyn, Air",
-      "url": "https://open.spotify.com/track/7jDxY5BblYMlamymg6jqfA"
-    },
-    {
       "id": "3ow0TQVttXQF8rLckmXgRx",
       "name": "Cherub Rock - 2011 Remaster",
       "artists": "The Smashing Pumpkins",
       "url": "https://open.spotify.com/track/3ow0TQVttXQF8rLckmXgRx"
+    },
+    {
+      "id": "7jDxY5BblYMlamymg6jqfA",
+      "name": "La femme d'argent - Vegyn Version",
+      "artists": "Vegyn, Air",
+      "url": "https://open.spotify.com/track/7jDxY5BblYMlamymg6jqfA"
     },
     {
       "id": "0GRBFjza23Im7Xb16c9AaK",
