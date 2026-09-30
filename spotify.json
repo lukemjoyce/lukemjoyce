@@ -1,6 +1,24 @@
 {
-  "updated": "2026-09-30T01:56:29.342Z",
+  "updated": "2026-09-30T08:19:33.376Z",
   "recent": [
+    {
+      "id": "0pwObEOHolQZSldJ2q1wpy",
+      "name": "Stinkfist",
+      "artists": "TOOL",
+      "url": "https://open.spotify.com/track/0pwObEOHolQZSldJ2q1wpy"
+    },
+    {
+      "id": "1Y13csEpu3TK5gQdzGLrd8",
+      "name": "Pardon Me",
+      "artists": "Incubus",
+      "url": "https://open.spotify.com/track/1Y13csEpu3TK5gQdzGLrd8"
+    },
+    {
+      "id": "3ow0TQVttXQF8rLckmXgRx",
+      "name": "Cherub Rock - 2011 Remaster",
+      "artists": "The Smashing Pumpkins",
+      "url": "https://open.spotify.com/track/3ow0TQVttXQF8rLckmXgRx"
+    },
     {
       "id": "0ZBchpb4CLk5Qqu3895Etp",
       "name": "Buttons",
@@ -12,24 +30,6 @@
       "name": "Aquarium",
       "artists": "Mac Miller",
       "url": "https://open.spotify.com/track/0i3NT2IIQrUlNeEd5ZyePp"
-    },
-    {
-      "id": "591GsK4rqja522IwAb6ZgG",
-      "name": "Poppy",
-      "artists": "Mac Miller",
-      "url": "https://open.spotify.com/track/591GsK4rqja522IwAb6ZgG"
-    },
-    {
-      "id": "1wmsQ6EdiEAhVYd6upLoZs",
-      "name": "BDE Bonus",
-      "artists": "Mac Miller",
-      "url": "https://open.spotify.com/track/1wmsQ6EdiEAhVYd6upLoZs"
-    },
-    {
-      "id": "1wmsQ6EdiEAhVYd6upLoZs",
-      "name": "BDE Bonus",
-      "artists": "Mac Miller",
-      "url": "https://open.spotify.com/track/1wmsQ6EdiEAhVYd6upLoZs"
     }
   ],
   "top": [
