@@ -1,6 +1,18 @@
 {
-  "updated": "2026-09-30T08:19:33.376Z",
+  "updated": "2026-09-30T15:47:40.082Z",
   "recent": [
+    {
+      "id": "2JuasWPUodaUxf5nwNpciQ",
+      "name": "Nutshell",
+      "artists": "Alice In Chains",
+      "url": "https://open.spotify.com/track/2JuasWPUodaUxf5nwNpciQ"
+    },
+    {
+      "id": "0GRBFjza23Im7Xb16c9AaK",
+      "name": "No Quarter - Remaster",
+      "artists": "Led Zeppelin",
+      "url": "https://open.spotify.com/track/0GRBFjza23Im7Xb16c9AaK"
+    },
     {
       "id": "0pwObEOHolQZSldJ2q1wpy",
       "name": "Stinkfist",
@@ -18,18 +30,6 @@
       "name": "Cherub Rock - 2011 Remaster",
       "artists": "The Smashing Pumpkins",
       "url": "https://open.spotify.com/track/3ow0TQVttXQF8rLckmXgRx"
-    },
-    {
-      "id": "0ZBchpb4CLk5Qqu3895Etp",
-      "name": "Buttons",
-      "artists": "Mac Miller",
-      "url": "https://open.spotify.com/track/0ZBchpb4CLk5Qqu3895Etp"
-    },
-    {
-      "id": "0i3NT2IIQrUlNeEd5ZyePp",
-      "name": "Aquarium",
-      "artists": "Mac Miller",
-      "url": "https://open.spotify.com/track/0i3NT2IIQrUlNeEd5ZyePp"
     }
   ],
   "top": [
