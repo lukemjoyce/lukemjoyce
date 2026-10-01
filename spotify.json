@@ -1,49 +1,17 @@
 {
-  "updated": "2026-09-30T20:42:25.067Z",
+  "updated": "2026-10-01T00:27:17.054Z",
   "recent": [
     {
-      "id": "2JuasWPUodaUxf5nwNpciQ",
-      "name": "Nutshell",
-      "artists": "Alice In Chains",
-      "url": "https://open.spotify.com/track/2JuasWPUodaUxf5nwNpciQ"
+      "id": "7jDxY5BblYMlamymg6jqfA",
+      "name": "La femme d'argent - Vegyn Version",
+      "artists": "Vegyn, Air",
+      "url": "https://open.spotify.com/track/7jDxY5BblYMlamymg6jqfA"
     },
     {
-      "id": "0GRBFjza23Im7Xb16c9AaK",
-      "name": "No Quarter - Remaster",
-      "artists": "Led Zeppelin",
-      "url": "https://open.spotify.com/track/0GRBFjza23Im7Xb16c9AaK"
-    },
-    {
-      "id": "0pwObEOHolQZSldJ2q1wpy",
-      "name": "Stinkfist",
-      "artists": "TOOL",
-      "url": "https://open.spotify.com/track/0pwObEOHolQZSldJ2q1wpy"
-    },
-    {
-      "id": "1Y13csEpu3TK5gQdzGLrd8",
-      "name": "Pardon Me",
-      "artists": "Incubus",
-      "url": "https://open.spotify.com/track/1Y13csEpu3TK5gQdzGLrd8"
-    },
-    {
-      "id": "3ow0TQVttXQF8rLckmXgRx",
-      "name": "Cherub Rock - 2011 Remaster",
-      "artists": "The Smashing Pumpkins",
-      "url": "https://open.spotify.com/track/3ow0TQVttXQF8rLckmXgRx"
-    }
-  ],
-  "top": [
-    {
-      "id": "1nqvLU0W004vagJWgpMXjd",
-      "name": "2006",
-      "artists": "Detente",
-      "url": "https://open.spotify.com/track/1nqvLU0W004vagJWgpMXjd"
-    },
-    {
-      "id": "3ow0TQVttXQF8rLckmXgRx",
-      "name": "Cherub Rock - 2011 Remaster",
-      "artists": "The Smashing Pumpkins",
-      "url": "https://open.spotify.com/track/3ow0TQVttXQF8rLckmXgRx"
+      "id": "1CGT5LV74SNzXFnVmTdAE8",
+      "name": "A Dream Goes On Forever",
+      "artists": "Vegyn, John Glacier",
+      "url": "https://open.spotify.com/track/1CGT5LV74SNzXFnVmTdAE8"
     },
     {
       "id": "5OW6HV3BZ7rK3TfknsHo0E",
@@ -52,16 +20,48 @@
       "url": "https://open.spotify.com/track/5OW6HV3BZ7rK3TfknsHo0E"
     },
     {
-      "id": "6tULAjasyLTeJecwhcIHCo",
-      "name": "Hummer - 2011 Remaster",
+      "id": "2HYr8LZRlJKEfMbIgT0365",
+      "name": "Will I Ever Find Love",
+      "artists": "Spencer Brown",
+      "url": "https://open.spotify.com/track/2HYr8LZRlJKEfMbIgT0365"
+    },
+    {
+      "id": "2I9foKseoFQh07p6sD2voE",
+      "name": "Many Men (Wish Death)",
+      "artists": "50 Cent",
+      "url": "https://open.spotify.com/track/2I9foKseoFQh07p6sD2voE"
+    }
+  ],
+  "top": [
+    {
+      "id": "3ow0TQVttXQF8rLckmXgRx",
+      "name": "Cherub Rock - 2011 Remaster",
       "artists": "The Smashing Pumpkins",
-      "url": "https://open.spotify.com/track/6tULAjasyLTeJecwhcIHCo"
+      "url": "https://open.spotify.com/track/3ow0TQVttXQF8rLckmXgRx"
+    },
+    {
+      "id": "1nqvLU0W004vagJWgpMXjd",
+      "name": "2006",
+      "artists": "Detente",
+      "url": "https://open.spotify.com/track/1nqvLU0W004vagJWgpMXjd"
+    },
+    {
+      "id": "5OW6HV3BZ7rK3TfknsHo0E",
+      "name": "Fingertips",
+      "artists": "The Brian Jonestown Massacre",
+      "url": "https://open.spotify.com/track/5OW6HV3BZ7rK3TfknsHo0E"
     },
     {
       "id": "0u5aO1GYsIhAWCPuXdwnak",
       "name": "Today - 2011 Remaster",
       "artists": "The Smashing Pumpkins",
       "url": "https://open.spotify.com/track/0u5aO1GYsIhAWCPuXdwnak"
+    },
+    {
+      "id": "6tULAjasyLTeJecwhcIHCo",
+      "name": "Hummer - 2011 Remaster",
+      "artists": "The Smashing Pumpkins",
+      "url": "https://open.spotify.com/track/6tULAjasyLTeJecwhcIHCo"
     }
   ]
 }
