@@ -1,6 +1,12 @@
 {
-  "updated": "2026-10-02T13:44:39.517Z",
+  "updated": "2026-10-02T19:06:45.683Z",
   "recent": [
+    {
+      "id": "37pKTyMwalomKCZjxTc2QZ",
+      "name": "Cherry-coloured Funk",
+      "artists": "Cocteau Twins",
+      "url": "https://open.spotify.com/track/37pKTyMwalomKCZjxTc2QZ"
+    },
     {
       "id": "4qG5lkLHhQHeSsky1TN20f",
       "name": "Ce matin-là - Vegyn Version",
@@ -24,12 +30,6 @@
       "name": "BDE Bonus",
       "artists": "Mac Miller",
       "url": "https://open.spotify.com/track/1wmsQ6EdiEAhVYd6upLoZs"
-    },
-    {
-      "id": "35YyxFpE0ZTOoqFx5bADW8",
-      "name": "Nude",
-      "artists": "Radiohead",
-      "url": "https://open.spotify.com/track/35YyxFpE0ZTOoqFx5bADW8"
     }
   ],
   "top": [
@@ -46,12 +46,6 @@
       "url": "https://open.spotify.com/track/1nqvLU0W004vagJWgpMXjd"
     },
     {
-      "id": "5OW6HV3BZ7rK3TfknsHo0E",
-      "name": "Fingertips",
-      "artists": "The Brian Jonestown Massacre",
-      "url": "https://open.spotify.com/track/5OW6HV3BZ7rK3TfknsHo0E"
-    },
-    {
       "id": "0u5aO1GYsIhAWCPuXdwnak",
       "name": "Today - 2011 Remaster",
       "artists": "The Smashing Pumpkins",
@@ -62,6 +56,12 @@
       "name": "Hummer - 2011 Remaster",
       "artists": "The Smashing Pumpkins",
       "url": "https://open.spotify.com/track/6tULAjasyLTeJecwhcIHCo"
+    },
+    {
+      "id": "7jDxY5BblYMlamymg6jqfA",
+      "name": "La femme d'argent - Vegyn Version",
+      "artists": "Vegyn, Air",
+      "url": "https://open.spotify.com/track/7jDxY5BblYMlamymg6jqfA"
     }
   ]
 }
