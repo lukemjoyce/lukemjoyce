@@ -1,6 +1,24 @@
 {
-  "updated": "2026-10-08T08:44:06.317Z",
+  "updated": "2026-10-08T16:18:52.678Z",
   "recent": [
+    {
+      "id": "77I33z80O7HatJ5PGEbXnH",
+      "name": "Stress Test",
+      "artists": "Vegyn",
+      "url": "https://open.spotify.com/track/77I33z80O7HatJ5PGEbXnH"
+    },
+    {
+      "id": "714P7sk3F4zrETNUPNIL35",
+      "name": "Trust",
+      "artists": "Vegyn, Matt Maltese",
+      "url": "https://open.spotify.com/track/714P7sk3F4zrETNUPNIL35"
+    },
+    {
+      "id": "5Yh2kwmgRsEfcWh9O82b07",
+      "name": "Time Well Spent",
+      "artists": "Vegyn",
+      "url": "https://open.spotify.com/track/5Yh2kwmgRsEfcWh9O82b07"
+    },
     {
       "id": "5Yh2kwmgRsEfcWh9O82b07",
       "name": "Time Well Spent",
@@ -12,24 +30,6 @@
       "name": "In the Front",
       "artists": "Vegyn, John Glacier",
       "url": "https://open.spotify.com/track/5TH7kcmgdMUDpUiinmZbDl"
-    },
-    {
-      "id": "5Yh2kwmgRsEfcWh9O82b07",
-      "name": "Time Well Spent",
-      "artists": "Vegyn",
-      "url": "https://open.spotify.com/track/5Yh2kwmgRsEfcWh9O82b07"
-    },
-    {
-      "id": "3172bQcerznXn3Yjg4rFpr",
-      "name": "City On The Map (feat. 50 Cent)",
-      "artists": "Griselda, 50 Cent",
-      "url": "https://open.spotify.com/track/3172bQcerznXn3Yjg4rFpr"
-    },
-    {
-      "id": "3172bQcerznXn3Yjg4rFpr",
-      "name": "City On The Map (feat. 50 Cent)",
-      "artists": "Griselda, 50 Cent",
-      "url": "https://open.spotify.com/track/3172bQcerznXn3Yjg4rFpr"
     }
   ],
   "top": [
