@@ -1,38 +1,24 @@
 {
-  "updated": "2026-10-09T16:02:43.687Z",
+  "updated": "2026-10-09T21:32:45.274Z",
   "recent": [
     {
-      "id": "4hMZu54zMxLajZ11yVCHrE",
-      "name": "THE INVISIBLE WAY",
-      "artists": "Tetsuo Sakurai",
-      "url": "https://open.spotify.com/track/4hMZu54zMxLajZ11yVCHrE"
-    },
-    {
-      "id": "7Ex2yX1MxtcmCPbfJaQIDq",
-      "name": "BRAIN STORM",
-      "artists": "Tetsuo Sakurai",
-      "url": "https://open.spotify.com/track/7Ex2yX1MxtcmCPbfJaQIDq"
-    },
-    {
-      "id": "1vJGI8d0mIh4xaWYK89rAQ",
-      "name": "REFRESH!",
-      "artists": "Tetsuo Sakurai",
-      "url": "https://open.spotify.com/track/1vJGI8d0mIh4xaWYK89rAQ"
-    },
-    {
-      "id": "0Hqzm7rSNkjNed9a0xRFUc",
-      "name": "Beer With My Buddies (feat. HARDY, Josh Thompson & Travis Denning)",
-      "artists": "HIXTAPE, HARDY, Travis Denning, Josh Thompson",
-      "url": "https://open.spotify.com/track/0Hqzm7rSNkjNed9a0xRFUc"
+      "id": "5Yh2kwmgRsEfcWh9O82b07",
+      "name": "Time Well Spent",
+      "artists": "Vegyn",
+      "url": "https://open.spotify.com/track/5Yh2kwmgRsEfcWh9O82b07"
     },
     {
       "id": "5Yh2kwmgRsEfcWh9O82b07",
       "name": "Time Well Spent",
       "artists": "Vegyn",
       "url": "https://open.spotify.com/track/5Yh2kwmgRsEfcWh9O82b07"
-    }
-  ],
-  "top": [
+    },
+    {
+      "id": "3WPSqHf6rvPMImARWnV8d4",
+      "name": "Another 9 Days",
+      "artists": "Vegyn, Ethan P. Flynn",
+      "url": "https://open.spotify.com/track/3WPSqHf6rvPMImARWnV8d4"
+    },
     {
       "id": "1CGT5LV74SNzXFnVmTdAE8",
       "name": "A Dream Goes On Forever",
@@ -44,6 +30,20 @@
       "name": "Time Well Spent",
       "artists": "Vegyn",
       "url": "https://open.spotify.com/track/5Yh2kwmgRsEfcWh9O82b07"
+    }
+  ],
+  "top": [
+    {
+      "id": "5Yh2kwmgRsEfcWh9O82b07",
+      "name": "Time Well Spent",
+      "artists": "Vegyn",
+      "url": "https://open.spotify.com/track/5Yh2kwmgRsEfcWh9O82b07"
+    },
+    {
+      "id": "1CGT5LV74SNzXFnVmTdAE8",
+      "name": "A Dream Goes On Forever",
+      "artists": "Vegyn, John Glacier",
+      "url": "https://open.spotify.com/track/1CGT5LV74SNzXFnVmTdAE8"
     },
     {
       "id": "3ow0TQVttXQF8rLckmXgRx",
