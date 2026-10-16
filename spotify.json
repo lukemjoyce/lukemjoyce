@@ -1,35 +1,35 @@
 {
-  "updated": "2026-10-16T17:16:41.794Z",
+  "updated": "2026-10-16T20:50:28.200Z",
   "recent": [
     {
-      "id": "06ZX08uRQDK02emdw9mN28",
-      "name": "Ensalada (feat. Anderson .Paak)",
-      "artists": "Freddie Gibbs, The Alchemist, Anderson .Paak",
-      "url": "https://open.spotify.com/track/06ZX08uRQDK02emdw9mN28"
+      "id": "3BTDloxIDTldJm2OAgOy34",
+      "name": "Richard Gear",
+      "artists": "Roc Marciano",
+      "url": "https://open.spotify.com/track/3BTDloxIDTldJm2OAgOy34"
     },
     {
-      "id": "45CzTjXCs6MtH5oEFNAu2e",
-      "name": "STORMBLUS",
-      "artists": "JEMS!, Elujay, J.Robb",
-      "url": "https://open.spotify.com/track/45CzTjXCs6MtH5oEFNAu2e"
+      "id": "2DHu1u0vBmgXSSrSqBOxoD",
+      "name": "Power",
+      "artists": "Roc Marciano",
+      "url": "https://open.spotify.com/track/2DHu1u0vBmgXSSrSqBOxoD"
     },
     {
-      "id": "411wm6kf9v4b1htI4HqcOY",
-      "name": "Casual Monday",
-      "artists": "Larry June",
-      "url": "https://open.spotify.com/track/411wm6kf9v4b1htI4HqcOY"
+      "id": "2LW2scLHE5xOXBG5OGxwRs",
+      "name": "456 (feat. Action Bronson)",
+      "artists": "Roc Marciano, Action Bronson",
+      "url": "https://open.spotify.com/track/2LW2scLHE5xOXBG5OGxwRs"
     },
     {
-      "id": "1WVq2IOZSTnOujahumpuli",
-      "name": "Lullaby",
-      "artists": "The Cure",
-      "url": "https://open.spotify.com/track/1WVq2IOZSTnOujahumpuli"
+      "id": "3OOcmjCU9H7iqWaRrjNgIl",
+      "name": "Bread of Life",
+      "artists": "Stove God Cooks, Roc Marciano",
+      "url": "https://open.spotify.com/track/3OOcmjCU9H7iqWaRrjNgIl"
     },
     {
-      "id": "1JekRMGQ8iN4G1AAdh0SBa",
-      "name": "Enjoy the Silence",
-      "artists": "Depeche Mode",
-      "url": "https://open.spotify.com/track/1JekRMGQ8iN4G1AAdh0SBa"
+      "id": "3LrQE3eHiB3Rqc4zdo5yys",
+      "name": "JJ Flash",
+      "artists": "Roc Marciano, The Alchemist",
+      "url": "https://open.spotify.com/track/3LrQE3eHiB3Rqc4zdo5yys"
     }
   ],
   "top": [
@@ -52,16 +52,16 @@
       "url": "https://open.spotify.com/track/3ow0TQVttXQF8rLckmXgRx"
     },
     {
-      "id": "1nqvLU0W004vagJWgpMXjd",
-      "name": "2006",
-      "artists": "Detente",
-      "url": "https://open.spotify.com/track/1nqvLU0W004vagJWgpMXjd"
-    },
-    {
       "id": "45CzTjXCs6MtH5oEFNAu2e",
       "name": "STORMBLUS",
       "artists": "JEMS!, Elujay, J.Robb",
       "url": "https://open.spotify.com/track/45CzTjXCs6MtH5oEFNAu2e"
+    },
+    {
+      "id": "1nqvLU0W004vagJWgpMXjd",
+      "name": "2006",
+      "artists": "Detente",
+      "url": "https://open.spotify.com/track/1nqvLU0W004vagJWgpMXjd"
     }
   ]
 }
