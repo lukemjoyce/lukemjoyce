@@ -1,11 +1,23 @@
 {
-  "updated": "2026-10-26T00:01:27.972Z",
+  "updated": "2026-10-26T05:55:11.277Z",
   "recent": [
     {
-      "id": "120DJqNCHmU1eXqU60ofSk",
-      "name": "Quiet - BBC Session/BC Mix",
-      "artists": "The Smashing Pumpkins",
-      "url": "https://open.spotify.com/track/120DJqNCHmU1eXqU60ofSk"
+      "id": "4SBbBKxypeNmDPs1xnpAbU",
+      "name": "Time Polish",
+      "artists": "Lovefear, LJM.",
+      "url": "https://open.spotify.com/track/4SBbBKxypeNmDPs1xnpAbU"
+    },
+    {
+      "id": "1nqvLU0W004vagJWgpMXjd",
+      "name": "2006",
+      "artists": "Detente",
+      "url": "https://open.spotify.com/track/1nqvLU0W004vagJWgpMXjd"
+    },
+    {
+      "id": "1YM2yozE7s0DjyKfcRzCB0",
+      "name": "A Perfect Day",
+      "artists": "Patch +",
+      "url": "https://open.spotify.com/track/1YM2yozE7s0DjyKfcRzCB0"
     },
     {
       "id": "6tULAjasyLTeJecwhcIHCo",
@@ -18,18 +30,6 @@
       "name": "Cherub Rock - 2011 Remaster",
       "artists": "The Smashing Pumpkins",
       "url": "https://open.spotify.com/track/3ow0TQVttXQF8rLckmXgRx"
-    },
-    {
-      "id": "3rt36njbDLJGdvdySoH0uQ",
-      "name": "Makeshift Tourniquet",
-      "artists": "Vegyn",
-      "url": "https://open.spotify.com/track/3rt36njbDLJGdvdySoH0uQ"
-    },
-    {
-      "id": "5TH7kcmgdMUDpUiinmZbDl",
-      "name": "In the Front",
-      "artists": "Vegyn, John Glacier",
-      "url": "https://open.spotify.com/track/5TH7kcmgdMUDpUiinmZbDl"
     }
   ],
   "top": [
@@ -52,16 +52,16 @@
       "url": "https://open.spotify.com/track/1CGT5LV74SNzXFnVmTdAE8"
     },
     {
-      "id": "0Hqzm7rSNkjNed9a0xRFUc",
-      "name": "Beer With My Buddies (feat. HARDY, Josh Thompson & Travis Denning)",
-      "artists": "HIXTAPE, HARDY, Travis Denning, Josh Thompson",
-      "url": "https://open.spotify.com/track/0Hqzm7rSNkjNed9a0xRFUc"
-    },
-    {
       "id": "3ow0TQVttXQF8rLckmXgRx",
       "name": "Cherub Rock - 2011 Remaster",
       "artists": "The Smashing Pumpkins",
       "url": "https://open.spotify.com/track/3ow0TQVttXQF8rLckmXgRx"
+    },
+    {
+      "id": "0Hqzm7rSNkjNed9a0xRFUc",
+      "name": "Beer With My Buddies (feat. HARDY, Josh Thompson & Travis Denning)",
+      "artists": "HIXTAPE, HARDY, Travis Denning, Josh Thompson",
+      "url": "https://open.spotify.com/track/0Hqzm7rSNkjNed9a0xRFUc"
     }
   ]
 }
