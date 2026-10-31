@@ -1,35 +1,35 @@
 {
-  "updated": "2026-10-31T17:35:41.987Z",
+  "updated": "2026-10-31T21:18:40.449Z",
   "recent": [
     {
-      "id": "2SgbR6ttzoNlCRGQOKjrop",
-      "name": "Cowboys from Hell",
-      "artists": "Pantera",
-      "url": "https://open.spotify.com/track/2SgbR6ttzoNlCRGQOKjrop"
+      "id": "1JSTJqkT5qHq8MDJnJbRE1",
+      "name": "Every Breath You Take",
+      "artists": "The Police",
+      "url": "https://open.spotify.com/track/1JSTJqkT5qHq8MDJnJbRE1"
     },
     {
-      "id": "3td69vL9Py7Ai9wfXYnvji",
-      "name": "When You Die",
-      "artists": "MGMT",
-      "url": "https://open.spotify.com/track/3td69vL9Py7Ai9wfXYnvji"
+      "id": "0yp3TvJNlG50Q4tAHWNCRm",
+      "name": "Enjoy the Silence",
+      "artists": "Depeche Mode",
+      "url": "https://open.spotify.com/track/0yp3TvJNlG50Q4tAHWNCRm"
     },
     {
-      "id": "5xHb1SyPrTOLC3ThG1LUu7",
-      "name": "Spanish Moon - Live at Lisner Auditorium, Washington, DC, 8/8/1977",
-      "artists": "Little Feat",
-      "url": "https://open.spotify.com/track/5xHb1SyPrTOLC3ThG1LUu7"
+      "id": "0vLwL4xuJ3s7SeaCdvMqkY",
+      "name": "Call Me",
+      "artists": "Blondie",
+      "url": "https://open.spotify.com/track/0vLwL4xuJ3s7SeaCdvMqkY"
     },
     {
-      "id": "7txxAtOMwLLnQTpKeBL6bp",
-      "name": "Mother",
-      "artists": "Danzig",
-      "url": "https://open.spotify.com/track/7txxAtOMwLLnQTpKeBL6bp"
+      "id": "7J1uxwnxfQLu4APicE5Rnj",
+      "name": "Billie Jean",
+      "artists": "Michael Jackson",
+      "url": "https://open.spotify.com/track/7J1uxwnxfQLu4APicE5Rnj"
     },
     {
-      "id": "5QTxFnGygVM4jFQiBovmRo",
-      "name": "(Don't Fear) The Reaper",
-      "artists": "Blue Öyster Cult",
-      "url": "https://open.spotify.com/track/5QTxFnGygVM4jFQiBovmRo"
+      "id": "1ChulFMnwxoD74Me8eX2TU",
+      "name": "You Spin Me Round (Like a Record)",
+      "artists": "Dead Or Alive",
+      "url": "https://open.spotify.com/track/1ChulFMnwxoD74Me8eX2TU"
     }
   ],
   "top": [
@@ -46,12 +46,6 @@
       "url": "https://open.spotify.com/track/45CzTjXCs6MtH5oEFNAu2e"
     },
     {
-      "id": "1CGT5LV74SNzXFnVmTdAE8",
-      "name": "A Dream Goes On Forever",
-      "artists": "Vegyn, John Glacier",
-      "url": "https://open.spotify.com/track/1CGT5LV74SNzXFnVmTdAE8"
-    },
-    {
       "id": "3ow0TQVttXQF8rLckmXgRx",
       "name": "Cherub Rock - 2011 Remaster",
       "artists": "The Smashing Pumpkins",
@@ -62,6 +56,12 @@
       "name": "Make a Wish",
       "artists": "Headache, Vegyn",
       "url": "https://open.spotify.com/track/0G2cq0o0vlcb0qHbjouDFf"
+    },
+    {
+      "id": "1CGT5LV74SNzXFnVmTdAE8",
+      "name": "A Dream Goes On Forever",
+      "artists": "Vegyn, John Glacier",
+      "url": "https://open.spotify.com/track/1CGT5LV74SNzXFnVmTdAE8"
     }
   ]
 }
