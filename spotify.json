@@ -1,44 +1,38 @@
 {
-  "updated": "2026-11-05T12:04:13.365Z",
+  "updated": "2026-11-05T20:32:18.372Z",
   "recent": [
     {
-      "id": "3wQaW4rEZe7AaDrlrX4eDy",
-      "name": "Buzzin'",
-      "artists": "Shwayze, Cisco Adler",
-      "url": "https://open.spotify.com/track/3wQaW4rEZe7AaDrlrX4eDy"
+      "id": "5rF6YUIlgiat22OT1lWspJ",
+      "name": "Seventeen Going Under",
+      "artists": "Sam Fender",
+      "url": "https://open.spotify.com/track/5rF6YUIlgiat22OT1lWspJ"
     },
     {
-      "id": "1M64p5QvgGd6UKqH4EjLZE",
-      "name": "Far Away Coast",
-      "artists": "Koresma",
-      "url": "https://open.spotify.com/track/1M64p5QvgGd6UKqH4EjLZE"
-    },
-    {
-      "id": "1cGcl9Ar9U3aAzw7NLPYdN",
-      "name": "Mobbin",
-      "artists": "Xavier Wulf, idontknowjeffery",
-      "url": "https://open.spotify.com/track/1cGcl9Ar9U3aAzw7NLPYdN"
-    },
-    {
-      "id": "0V3wPSX9ygBnCm8psDIegu",
-      "name": "Anti-Hero",
-      "artists": "Taylor Swift",
-      "url": "https://open.spotify.com/track/0V3wPSX9ygBnCm8psDIegu"
-    },
-    {
-      "id": "3qaSqrrevBrb84xl5JlptU",
-      "name": "Dakota",
+      "id": "1D6dE2mMlGz3WN1gjKQ76E",
+      "name": "Mr. Writer",
       "artists": "Stereophonics",
-      "url": "https://open.spotify.com/track/3qaSqrrevBrb84xl5JlptU"
+      "url": "https://open.spotify.com/track/1D6dE2mMlGz3WN1gjKQ76E"
+    },
+    {
+      "id": "6KtLECDztnah63TNmV4Plw",
+      "name": "Wish You Were Here",
+      "artists": "Incubus",
+      "url": "https://open.spotify.com/track/6KtLECDztnah63TNmV4Plw"
+    },
+    {
+      "id": "1cAMXz9mnvrqyQLSG4KeeE",
+      "name": "Sirens",
+      "artists": "Pearl Jam",
+      "url": "https://open.spotify.com/track/1cAMXz9mnvrqyQLSG4KeeE"
+    },
+    {
+      "id": "6SXy02aTZU3ysoGUixYCz0",
+      "name": "Maybe Tomorrow",
+      "artists": "Stereophonics",
+      "url": "https://open.spotify.com/track/6SXy02aTZU3ysoGUixYCz0"
     }
   ],
   "top": [
-    {
-      "id": "5Yh2kwmgRsEfcWh9O82b07",
-      "name": "Time Well Spent",
-      "artists": "Vegyn",
-      "url": "https://open.spotify.com/track/5Yh2kwmgRsEfcWh9O82b07"
-    },
     {
       "id": "45CzTjXCs6MtH5oEFNAu2e",
       "name": "STORMBLUS",
@@ -50,6 +44,12 @@
       "name": "Make a Wish",
       "artists": "Headache, Vegyn",
       "url": "https://open.spotify.com/track/0G2cq0o0vlcb0qHbjouDFf"
+    },
+    {
+      "id": "5Yh2kwmgRsEfcWh9O82b07",
+      "name": "Time Well Spent",
+      "artists": "Vegyn",
+      "url": "https://open.spotify.com/track/5Yh2kwmgRsEfcWh9O82b07"
     },
     {
       "id": "3ow0TQVttXQF8rLckmXgRx",
