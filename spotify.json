@@ -1,6 +1,24 @@
 {
-  "updated": "2026-11-14T10:08:40.267Z",
+  "updated": "2026-11-14T16:55:35.747Z",
   "recent": [
+    {
+      "id": "1gyee1JuFFiP476LQpRMYU",
+      "name": "The Red",
+      "artists": "Chevelle",
+      "url": "https://open.spotify.com/track/1gyee1JuFFiP476LQpRMYU"
+    },
+    {
+      "id": "6IPJ7LeWIOhxPW8Sq3nIGc",
+      "name": "Re-Arranged",
+      "artists": "Limp Bizkit",
+      "url": "https://open.spotify.com/track/6IPJ7LeWIOhxPW8Sq3nIGc"
+    },
+    {
+      "id": "42T2QQv3xgBlpQxaSP7lnK",
+      "name": "One Last Breath",
+      "artists": "Creed",
+      "url": "https://open.spotify.com/track/42T2QQv3xgBlpQxaSP7lnK"
+    },
     {
       "id": "5ghIJDpPoe3CfHMGu71E6T",
       "name": "Smells Like Teen Spirit",
@@ -12,24 +30,6 @@
       "name": "When I'm Gone",
       "artists": "3 Doors Down",
       "url": "https://open.spotify.com/track/3WbphvawbMZ8FyqDxYGdSQ"
-    },
-    {
-      "id": "2uDwRgwGPjXq0oj0hNCuFc",
-      "name": "Shadow on the Sun",
-      "artists": "Audioslave",
-      "url": "https://open.spotify.com/track/2uDwRgwGPjXq0oj0hNCuFc"
-    },
-    {
-      "id": "7sIDKjMCNzdKIR7iIHmqg3",
-      "name": "Fine Again - Full Band Acoustic",
-      "artists": "Seether",
-      "url": "https://open.spotify.com/track/7sIDKjMCNzdKIR7iIHmqg3"
-    },
-    {
-      "id": "0foa6RJ1ekOv5YqJeLBczR",
-      "name": "Lost All Control",
-      "artists": "Seether",
-      "url": "https://open.spotify.com/track/0foa6RJ1ekOv5YqJeLBczR"
     }
   ],
   "top": [
